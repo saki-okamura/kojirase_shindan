@@ -24,3 +24,9 @@ TwitterのアカウントIDを入力するだけで、「この人はこじら�
 # 外部API
 ・Twitter API
 ・AWS comprehend
+
+# スケジュール
+README〜ER図作成：3月末 〆切
+メイン機能実装：4/1~4/20
+β版をRUNTEQ内リリース（MVP）：4/21〆切
+本番リリース：5月中旬
