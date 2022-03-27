@@ -10,6 +10,22 @@ p {
   font-size: 2rem;
 }
 
+.sub-title {
+  text-align: left;
+}
+
+.question {
+  text-align: left;
+  span {
+    color: #a81434;
+    font-weight: bold;
+  }
+};
+
+.description {
+  text-align: left;
+}
+
 button {
   font-size: 3rem;
   font-family: 'HanziPen TC', sans-serif;
