@@ -29,12 +29,20 @@ p {
   text-align: left;
 }
 
-button {
+.button {
   font-size: 3rem;
   font-family: 'HanziPen TC', sans-serif;
   background-color :#040506;
   color: white;
   border-radius: 15px;
+}
+
+.back-button {
+  font-size: 2rem;
+  font-family: 'HanziPen TC', sans-serif;
+  background-color :#969697;
+  color: white;
+  border-radius: 10px;
 }
 
 .number-privacy {
@@ -51,7 +59,6 @@ button {
   ul {
   list-style: none;
   font-size: 1.2rem;
-  text-align: left
+  text-align: left;
   }
-
 }
