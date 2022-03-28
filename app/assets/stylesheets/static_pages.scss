@@ -33,3 +33,22 @@ button {
   color: white;
   border-radius: 15px;
 }
+
+.number-privacy {
+  font-size: 2rem;
+  text-align: left;
+  font-weight: bold;
+}
+
+.privacy-description {
+  p {
+    font-size: 1.2rem;
+    text-align: left;
+  }
+  ul {
+  list-style: none;
+  font-size: 1.2rem;
+  text-align: left
+  }
+
+}
