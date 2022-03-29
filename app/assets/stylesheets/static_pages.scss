@@ -42,7 +42,6 @@ p {
   font-family: 'HanziPen TC', sans-serif;
   background-color :#969697;
   color: white;
-  border-radius: 9px;
 }
 
 .link-button {
@@ -55,9 +54,10 @@ p {
 .number-privacy {
   font-size: 1.5rem;
   text-align: left;
-  font-weight: bold;
+  span {
+    font-weight: bold;
+  }
 }
-
 .privacy-description {
   p {
     font-size: 1.1rem;
