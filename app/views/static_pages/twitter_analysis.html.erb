@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="mt-5">
-    <% @tweets.each_with_index(1) do |tweet, index| %>
-      <%= "#{index}番目のツイートは、#{tweet}"です。%>
+    <% @tweets.each.with_index(1) do |tweet, i| %>
+      <%= "#{i}番目のツイートは、#{tweet}"です。%>
     <% end %>
   </div>
 </div>
