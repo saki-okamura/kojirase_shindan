@@ -23,7 +23,9 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 
 # twitter
-gem 'twitter'
+#gem 'twitter'
+#gem 'simple_twitter'
+gem 'tweetkit'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
