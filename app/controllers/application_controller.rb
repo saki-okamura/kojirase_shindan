@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
 
-  def client_pass
+  def twitter_client
     @client = Twitter::REST::Client.new do |config|
       config.consumer_key        = ''
       config.consumer_secret     = ''
