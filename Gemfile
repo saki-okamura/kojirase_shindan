@@ -26,6 +26,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'twitter'
 #gem 'simple_twitter'
 #gem 'tweetkit'
+# 環境変数を簡単に利用できるgem
+gem 'dotenv-rails'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
