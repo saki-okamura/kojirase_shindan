@@ -1,10 +1,12 @@
 class ResultsController < ApplicationController
   before_action :twitter_client
 
-  def index
-    @tweets = []
-    @client.user_timeline("rouninsaikouw", exclude_replies: false, include_rts: true).take(25).each do |tw|
-      @tweets << tw.text
+  def show
+    if request.post?
+      @user = User.new(
+        name: @client.user(params[:text]).name,
+        screen_name: @client.user(params[:text]).screen_name
+      )
     end
   end
 end
