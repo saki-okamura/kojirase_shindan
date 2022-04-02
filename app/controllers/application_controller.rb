@@ -1,7 +1,20 @@
 class ApplicationController < ActionController::Base
 
+  rescue_from Exception, with: :render_500
+  rescue_from ActionController::RoutingError, with: :render_404
+
   rescue_from Twitter::Error::Unauthorized, with: :unauthorized
   rescue_from Twitter::Error::NotFound, with: :not_found
+
+
+  def render_500
+    render template: 'errors/error_500', status: 500
+  end
+
+  # 存在しないページへのアクセス時でのエラー
+  def render_404
+    render template: 'errors/error_404', status: 404
+  end
 
   def unauthorized
     flash[:danger] = '非公開アカウントです。公開アカウントを入力してください。'
