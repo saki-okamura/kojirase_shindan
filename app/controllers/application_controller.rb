@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 
   rescue_from Twitter::Error::Unauthorized, with: :unauthorized
   rescue_from Twitter::Error::NotFound, with: :not_found
+  rescue_from Twitter::Error::TooManyRequests, :with => :too_many_requests
 
 
   def render_500
@@ -17,13 +18,18 @@ class ApplicationController < ActionController::Base
   end
 
   def unauthorized
-    flash[:danger] = '非公開アカウントです。公開アカウントを入力してください。'
-    redirect_to root_path
+    flash.now[:danger] = '非公開アカウントです。公開アカウントを入力してください'
+    render root_path
   end
 
   def not_found
-    flash[:danger] = '有効なアカウントを入力してください。'
-    redirect_to root_path
+    flash.now[:danger] = '有効なアカウントを入力してください'
+    render root_path
+  end
+
+  def too_many_requests
+    flash.now[:danger] = "リクエストが集中しています\n最大15分待ってから再度試して下さい"
+    render root_path
   end
 
   def twitter_client
