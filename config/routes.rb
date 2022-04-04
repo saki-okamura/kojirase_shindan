@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   get '/results' => 'results#show'
-  post '/results' => 'results#show'
 
   root to: 'static_pages#top'
   get '/help', to: 'static_pages#help'
