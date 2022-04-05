@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+@import 'bootstrap';
+
+ body {
+  font-size: 2rem;
+  font-family: 'HanziPen TC', sans-serif;
+  background-color: #aabbc5;
+  text-align: center;
+  height: auto;
+}
