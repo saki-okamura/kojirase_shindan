@@ -21,17 +21,17 @@ class ApplicationController < ActionController::Base
 
   def unauthorized
     flash.now[:danger] = '非公開アカウントです。公開アカウントを入力してください'
-    render root_path
+    render 'static_pages/top'
   end
 
   def not_found
     flash.now[:danger] = '有効なアカウントを入力してください'
-    render root_path
+    render 'static_pages/top'
   end
 
   def too_many_requests
     flash.now[:danger] = "リクエストが集中しています\n最大15分待ってから再度試して下さい"
-    render root_path
+    render 'static_pages/top'
   end
 
   # 環境変数の設定
