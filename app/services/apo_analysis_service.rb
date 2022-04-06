@@ -1,4 +1,5 @@
 class ApoAnalysisService
+  # アポやデートに関するワード
   # アポ度の診断
 
   def initialize(user, twitter_client, tweets)
@@ -8,7 +9,7 @@ class ApoAnalysisService
   end
 
   def call
-    words = ['アポ', 'マッチングアプリ', '結婚相談所', '相席屋', '婚活', '仮交際', 'デート', '交際', '会いたい', '打診', '土日', 'ブロック', 'FO', '予約', '待ち合わせ']
+    words = ['アポ', 'マッチングアプリ', '結婚相談所', '相席屋', '婚活', '仮交際', 'デート', '真剣交際', '会いたい', '打診', '土日', 'ブロック', 'FO', '予約', '待ち合わせ', 'お見合い']
     apo = 0
     words.each do |word|
       apo += @tweets.filter{|tweet| tweet.text.include?(word)}.size

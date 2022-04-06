@@ -8,7 +8,7 @@ class PresentAnalysisService
   end
 
   def call
-    words = ['プレゼント', 'CHANEL', 'コットン', 'GUCCI', '4℃', 'クロエ', 'ロイヤルミルクティー', 'サイゼリヤ', '婚約指輪', 'お寿司']
+    words = ['プレゼント', 'CHANEL', 'コットン', 'GUCCI', '4℃', 'クロエ', 'ロイヤルミルクティー', 'サイゼリヤ', '婚約指輪', 'お寿司', '奢り', '奢られ', 'バレンタイン', 'ホワイトデー', 'クリスマス',]
     present = 0
     words.each do |word|
       present += @tweets.filter{|tweet| tweet.text.include?(word)}.size
