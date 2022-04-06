@@ -1,5 +1,5 @@
-class NumaAnalysisService
-  # 沼度の診断
+class PresentAnalysisService
+  # プレゼントに関わる診断
 
   def initialize(user, twitter_client, tweets)
     @user = user
@@ -8,13 +8,13 @@ class NumaAnalysisService
   end
 
   def call
-    words = ['ザオラル', 'ヤリモク', '既婚者', 'ブロック', '浮気', '奢り', '奢られ']
-    numa = 0
+    words = ['プレゼント', 'CHANEL', 'コットン', 'GUCCI', '4℃', 'クロエ', 'ロイヤルミルクティー', 'サイゼリヤ', '婚約指輪', 'お寿司']
+    present = 0
     words.each do |word|
-      numa += @tweets.filter{|tweet| tweet.text.include?(word)}.size
+      present += @tweets.filter{|tweet| tweet.text.include?(word)}.size
     end
 
-    numa_point = case numa
+    present_point = case present
               when 0..5
                 1
               when 6..20
