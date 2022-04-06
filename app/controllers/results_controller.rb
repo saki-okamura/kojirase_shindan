@@ -2,11 +2,11 @@ class ResultsController < ApplicationController
 
   def show
     @user = twitter_client.user(params[:user])
-    @tweets = twitter_client.user_timeline(params[:user], count: 200, tweet_mode: 'extended')
-    @follower_point = FollowerAnalysisService.new(params[:user], @twitter_client).call
-    #@spec_point = SpecAnalysisService.new(params[:user]).call
+    tweets = twitter_client.user_timeline(params[:user], count: 200, tweet_mode: 'extended')
+    @follower_point = FollowerAnalysisService.new(params[:user], twitter_client).call
+    @spec_point = SpecAnalysisService.new(params[:user], twitter_client, tweets).call
     #@present_point = PresentAnalysisService.new(params[:user]).call
-    @apo_point = ApoAnalysisService.new(params[:user], @twitter_client, @tweets).call
+    @apo_point = ApoAnalysisService.new(params[:user], twitter_client, tweets).call
     #@numa_point = NumaAnalysisService.new(params[:user]).call
   end
 
