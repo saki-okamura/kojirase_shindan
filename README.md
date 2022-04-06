@@ -24,16 +24,14 @@ TwitterのアカウントIDを入力するだけで、「この人はこじら�
 ・結果を表示する
 
 # 使用技術
-・ruby
+・Ruby
 
-・rails
+・Ruby on Rails
 
-・js
+・Javascript
 
 # 外部API
 ・Twitter API
-
-・AWS comprehend
 
 # スケジュール
 README〜ER図作成：3月末 〆切
