@@ -3,7 +3,7 @@
   <h1><%= link_to 'こじらせ診断', root_path %></h1>
   <div class="mb-5 mt-5">
     <%= form_with url: results_path, method: :get, local: true do |f| %>
-      <%= f.text_field :user, autofocus: true, placeholder: 'IDを入力', class: 'analysis-button' %>
+      <%= f.text_field :user, autofocus: true, placeholder: 'IDを入力', class: 'analysis-form' %>
       <%= f.submit '診断する', class: 'button' %>
     <% end %>
   </div>
