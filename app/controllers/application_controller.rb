@@ -20,12 +20,12 @@ class ApplicationController < ActionController::Base
   end
 
   def unauthorized
-    flash.now[:danger] = '非公開アカウントです。公開アカウントを入力してください'
+    flash.now[:danger] = '非公開アカウントです。公開アカウントを入力してください。'
     render 'static_pages/top'
   end
 
   def not_found
-    flash.now[:danger] = '有効なアカウントを入力してください'
+    flash.now[:danger] = '有効なアカウントを入力してください。'
     render 'static_pages/top'
   end
 
