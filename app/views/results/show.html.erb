@@ -1,84 +1,14 @@
 <% content_for(:title, '診断結果') %>
-<div class="mb-5 mt-5">
-  <h1>診断結果</h1>
-  <p><%= @user.name %>さん</p>
-  <input type="hidden" id="follower" value="<%= @follower_point %>">
-  <input type="hidden" id="apo" value="<%= @apo_point %>">
-  <input type="hidden" id="numa" value="<%= @numa_point %>">
-  <input type="hidden" id="spec" value="<%= @spec_point %>">
-  <input type="hidden" id="present" value="<%= @present_point %>">
+<section id="results" class="results section-bg">
+  <div class="container">
+    <div class="section-title">
+      <h2>診断結果</h2>
+      <h2><%= @user.name %>さん</h2>
+    </div>
+    <%#= render 'shared/kojirase_chart' %>
 
-<canvas id="kojiraseChart"></div>
-<script>
-var follower = document.getElementById('follower').value
-var apo = document.getElementById('apo').value
-var numa = document.getElementById('numa').value
-var spec = document.getElementById('spec').value
-var present = document.getElementById('present').value
-
-var ctx = document.getElementById("kojiraseChart");
-var kojiraseChart = new Chart(ctx, {
-  //グラフの種類
-  type: 'radar',
-  //データの設定
-  data: {
-    //データ項目のラベル
-    labels: ["インフルエンサー度", "アポ度", "沼度", "高望み度", "４℃度"],
-    //データセット
-    datasets: [{
-            //背景色
-            backgroundColor: "rgba(236, 23, 183,0.65)",
-            //枠線の色
-            borderColor: "rgba(236, 23, 183,0.65)",
-            //結合点の枠線の色
-            pointBorderColor: "#fff",
-            //結合点の背景色（ホバ時）
-            pointHoverBackgroundColor: "#fff",
-            //結合点の枠線の色（ホバー時）
-            pointHoverBorderColor: "rgba(200,112,126,1)",
-            //結合点より外でマウスホバーを認識する範囲（ピクセル単位）
-            hitRadius: 5,
-            //グラフのデータ
-            data: [follower, apo, numa, spec, present]
-          }
-      ]
-  },
- options: {
-    // レスポンシブ指定
-    responsive: true,
-    // タイトルについて
-    legend: {
-      display: false
-    },
-    scale: {
-      // グリッド線の設定
-      gridLines: {
-        color: "rgba(255,255,255,1)",
-        lineWidth: 2.5
-      },
-      // 点ラベルの設定
-      pointLabels: {
-          fontSize: 15,
-          fontColor: 'white',
-          fontStyle: 'bold'
-      },
-      ticks: {
-        // 最小値の値を0指定
-        beginAtZero:true,
-        min: 0,
-        // 最大値を指定
-        max: 5,
-        stepSize: 12,
-        fontColor: 'white'
-      },
-      angleLines: {
-        display: true,
-        color: "rgba(255, 255, 255,0.5)",
-          lineWidth: 1.5
-      }
-    }
-  }
-});
-</script>
-<%= button_to '戻る', root_path, method: :get, class: 'back-button' %>
-</div>
+    <div class="mb-5 mt-5">
+      <%= button_to '戻る', root_path, method: :get, class: 'back-button' %>
+    </div>
+  </div>
+</section>
