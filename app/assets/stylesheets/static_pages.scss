@@ -20,6 +20,17 @@
   font-family: "Poppins", sans-serif;
 }
 
+#hero .btn-get-started {
+  font-size: 64px;
+  transition: 0.5s;
+  color: #fff;
+  height: 60px;
+}
+#hero .btn-get-started:hover {
+  padding-top: 10px;
+  color: #d43076;
+}
+
 .navbar ul {
   display: flex;
   list-style: none;
