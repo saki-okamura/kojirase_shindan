@@ -20,6 +20,17 @@
   font-family: "Poppins", sans-serif;
 }
 
+#hero .btn-get-started {
+  font-size: 64px;
+  transition: 0.5s;
+  color: #fff;
+  height: 60px;
+}
+#hero .btn-get-started:hover {
+  padding-top: 10px;
+  color: #d43076;
+}
+
 .navbar ul {
   display: flex;
   list-style: none;
@@ -51,4 +62,27 @@
 }
 #footer .copyright {
   text-align: center;
+}
+
+.analysis-form {
+  border-radius: 10px;
+  box-shadow: none;
+  font-size: 25px;
+  font-family: "Playfair Display", serif;
+}
+
+//.analysis-form input:focus {
+  //border-color: #d43076;
+
+.button {
+  font-family: "Playfair Display", serif;
+  background: #d43076;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  border-radius: 50px;
+}
+
+.button[type=submit]:hover {
+  background: #dd5a92;
 }
