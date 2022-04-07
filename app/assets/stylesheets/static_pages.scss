@@ -1,18 +1,18 @@
-#hero {
+#top {
   width: 100%;
   height: 75vh;
   background: url("hero-bg.jpg") top center;
   background-size: cover;
   padding: 0 15px;
 }
-#hero h1 {
+#top h1 {
   margin: 0 0 10px 0;
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
   color: #fff;
 }
-#hero h2 {
+#top h2 {
   color: #eee;
   margin-bottom: 10px;
   font-size: 24px;
@@ -20,13 +20,13 @@
   font-family: "Poppins", sans-serif;
 }
 
-#hero .btn-get-started {
+#top .btn-get-started {
   font-size: 64px;
   transition: 0.5s;
   color: #fff;
   height: 60px;
 }
-#hero .btn-get-started:hover {
+#top .btn-get-started:hover {
   padding-top: 10px;
   color: #d43076;
 }
