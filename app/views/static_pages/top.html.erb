@@ -1,14 +1,18 @@
-<div class="container-fluid">
-  <p>そこのあなた、こじらせてない？</p>
-  <h1 class="mt-5">こじらせ診断</h1>
-    <div class="mb-5 mt-5">
-      <%= form_with url: results_path, method: :get, local: true do |f| %>
-        <%= f.text_field :user, autofocus: true, placeholder: 'IDを入力', class: 'analysis-button' %>
-        <%= f.submit '診断する', class: 'button' %>
-      <% end %>
-    </div>
-    <p><%= link_to 'こじらせ診断とは？', help_path, class: 'link-button' %></p>
-    <p><%= link_to 'お問い合せ', "https://docs.google.com/forms/d/e/1FAIpQLSeWG6MyzFwicUtaeYUGjXBBjaeKHF9nkgEUuXcRc66XmLaTIg/viewform?embedded=true", class: 'link-button'  %></p>
-    <p><%= link_to '利用規約', terms_path, class: 'link-button' %></p>
-    <p><%= link_to 'プライバシーポリシー', privacy_path, class: 'link-button' %></p>
-</div>
+<section id="hero" class="d-flex flex-column align-items-center justify-content-center">
+  <h2>そこのあなた、こじらせてない？</h2>
+  <h1><%= link_to 'こじらせ診断', root_path %></h1>
+  <div class="mb-5 mt-5">
+    <%= form_with url: results_path, method: :get, local: true do |f| %>
+      <%= f.text_field :user, autofocus: true, placeholder: 'IDを入力', class: 'analysis-button' %>
+      <%= f.submit '診断する', class: 'button' %>
+    <% end %>
+  </div>
+</section>
+  <nav id="navbar" class="navbar">
+    <ul>
+      <li><%= link_to 'こじらせ診断とは？', help_path, class: 'link-button' %></li>
+      <li><%= link_to 'お問い合せ', "https://docs.google.com/forms/d/e/1FAIpQLSeWG6MyzFwicUtaeYUGjXBBjaeKHF9nkgEUuXcRc66XmLaTIg/viewform?embedded=true", class: 'link-button'  %></li>
+      <li><%= link_to '利用規約', terms_path, class: 'link-button' %></li>
+      <li><%= link_to 'プライバシーポリシー', privacy_path, class: 'link-button' %></li>
+    </ul>
+  </nav>
