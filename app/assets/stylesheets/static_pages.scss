@@ -1,76 +1,36 @@
-p {
-  font-size: 2rem;
+#hero {
+  width: 100%;
+  height: 75vh;
+  background: url("hero-bg.jpg") top center;
+  background-size: cover;
+  padding: 0 15px;
+}
+#hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
+#hero h2 {
+  color: #eee;
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 300;
+  font-family: "Poppins", sans-serif;
 }
 
-.sub-title {
-  text-align: left;
-}
-
-.question {
-  text-align: left;
-  span {
-    color: #a81434;
-    font-weight: bold;
-  }
-  ul {
-    list-style: none;
-  }
-};
-
-.description {
-  text-align: left;
-}
-
-.button {
-  font-size: 3rem;
-  font-family: 'HanziPen TC', sans-serif;
-  background-color :#040506;
-  color: white;
-  border-radius: 15px;
-}
-
-.analysis-button {
-  font-size: 2rem;
-  font-family: 'HanziPen TC', sans-serif;
-  background-color :#969697;
-  color: white;
-}
-
-.back-button {
-  font-size: 2rem;
-  font-family: 'HanziPen TC', sans-serif;
-  background-color :#969697;
-  color: white;
-}
-
-.link-button {
-  font-size: 2rem;
-  font-family: 'HanziPen TC', sans-serif;
-  background-color :#d0d0db;
-  color: rgb(221, 217, 217)e;
-}
-
-.number-privacy {
-  font-size: 1.5rem;
-  text-align: left;
-  span {
-    font-weight: bold;
-  }
-}
-.privacy-description {
-  p {
-    font-size: 1.1rem;
-    text-align: left;
-  }
-  ul {
+.navbar ul {
+  display: flex;
   list-style: none;
-  font-size: 1.1rem;
-  text-align: left;
-  }
 }
 
-.copyright {
-  p {
-    font-size: 1.1rem;
-  }
+.navbar a, .navbar a:focus {
+  padding: 10px 0 10px 30px;
+  font-size: 20px;
+  color: #2c4964;
+  white-space: nowrap;
+}
+.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+  color: #d43076;
 }

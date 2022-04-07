@@ -15,10 +15,21 @@
  */
 @import 'bootstrap';
 
- body {
-  font-size: 2rem;
-  font-family: 'HanziPen TC', sans-serif;
-  background-color: #aabbc5;
-  text-align: center;
-  height: auto;
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #5a656e;
+}
+
+a {
+  color: #d43076;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #dd5a92;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", serif;
 }
