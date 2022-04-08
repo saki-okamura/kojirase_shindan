@@ -17,8 +17,7 @@
   color: #eee;
   margin-bottom: 10px;
   font-size: 24px;
-  font-weight: 300;
-  font-family: "Georgia";
+  font-weight: 500;
 }
 
 .row {
@@ -51,19 +50,6 @@
 
 #form-id input:focus {
   color: #d43076;
-}
-
-.button {
-  font-family: "Playfair Display", serif;
-  background: #d43076;
-  border: 0;
-  padding: 10px 24px;
-  color: #fff;
-  border-radius: 50px;
-}
-
-.button[type=submit]:hover {
-  background: #dd5a92;
 }
 
 .flash-message{
