@@ -19,7 +19,7 @@ body {
   font-family: "Georgia", serif;
   color: #dadfe2;
   background: #c20255;
-  text-align: center;
+  text-align: left;
 }
 
 a {
@@ -44,6 +44,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 30px;
   padding-bottom: 30px;
 }
+
 .section-title h2 {
   font-size: 32px;
   font-weight: bold;
@@ -53,24 +54,23 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
 }
 
-.section-title h2::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100px;
-  height: 3px;
-  background: #d43076;
-  bottom: 0;
-  left: 0;
+.topbtn {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-.back-button{
-  background: #d43076;
+.topbtn input.btn-malformation {
+  background: #520386ef;
+  font-size: 40px;
   border: 0;
-  padding: 10px 24px;
+  padding: 2rem 5rem;
   color: #fff;
   transition: 0.4s;
-  border-radius: 50px;
+  border-radius: 100% 50px/50px 100%;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .back-button:hover {
