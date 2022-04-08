@@ -6,21 +6,48 @@
     </div>
     <div class="mb-2 mt-2">
       <%= form_with url: results_path, method: :get, local: true do |f| %>
-        <%= f.text_field :user, autofocus: true, placeholder: 'IDを入力', class: 'analysis-form' %>
+      <div class="form-group">
+        <%= f.text_field :user, autofocus: true, placeholder: 'IDを入力', class: 'form-control', id: 'form-id' %>
+      </div>
       <%= f.submit '診断する', class: 'button' %>
       <% end %>
     </div>
-  <a href="#" class="btn-get-started scrollto"><i class="bi bi-chevron-double-down"></i></a>
 </section>
+<% content_for(:title, 'こじらせ診断とは？') %>
+<section id="help" class="help section-bg">
+  <div class="container">
+    <div class="section-title">
+      <h2>こじらせ診断とは？</h2>
+    </div>
+    <div class="sub-title">
+      <p>TwitterのアカウントIDを入力するだけでその人がどのくらいこじらせているかを診断するツールです</p>
+    </div>
+      <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+        <div class="icon-box">
+          <h2 class="question">気になる人からディナーに誘われた！まさかの某ファミレスだった。私ってそんなに安い女なの？</h2>
+        </div>
+      </div>
 
-  <header id="header" class="d-flex align-items-center">
-    <div class="container d-flex align-items-center justify-content-between">
-    <nav id="navbar" class="navbar">
-    <ul>
-      <li><%= link_to 'こじらせ診断とは？', help_path, class: 'link-button' %></li>
-      <li><%= link_to 'お問い合せ', "https://docs.google.com/forms/d/e/1FAIpQLSeWG6MyzFwicUtaeYUGjXBBjaeKHF9nkgEUuXcRc66XmLaTIg/viewform?embedded=true", class: 'link-button'  %></li>
-      <li><%= link_to '利用規約', terms_path, class: 'link-button' %></li>
-      <li><%= link_to 'プライバシーポリシー', privacy_path, class: 'link-button' %></li>
-    </ul>
-    </nav>
-  </header>
+      <div class="col-md- col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+        <div class="icon-box">
+          <h2 class="question">彼女へクリスマスにハートのネックレスをあげたいんだけど、某アクセサリーブランドってダサいのかな？</h2>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+        <div class="icon-box">
+          <h2 class="question">「婚約指輪を折半してほしい」と提案したらケチと言われた・・みんな婚約指輪はプレゼントしてるの？</h2>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+        <div class="icon-box">
+          <h2 class="question">バレンタインデーのお返しはハイブランドのコットン。女性ってみんなハイブラ好きなんでしょ？</h2>
+        </div>
+      </div>
+
+    <div class="description">
+      <p>ネットにはこのように恋愛に対して様々な意見があり、誰を信じたらよいのかわからない・・</p>
+      <p>そんなときはこじらせ診断をしましょう！</p>
+    </div>
+</section>

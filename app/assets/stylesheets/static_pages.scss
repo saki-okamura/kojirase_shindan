@@ -5,9 +5,10 @@
   background-size: cover;
   padding: 0 15px;
 }
+
 #top h1 {
   margin: 0 0 10px 0;
-  font-size: 48px;
+  font-size: 60px;
   font-weight: 700;
   line-height: 56px;
   color: #fff;
@@ -17,53 +18,40 @@
   margin-bottom: 10px;
   font-size: 24px;
   font-weight: 300;
-  font-family: "Poppins", sans-serif;
+  font-family: "Georgia";
 }
 
-#top .btn-get-started {
-  font-size: 64px;
-  transition: 0.5s;
-  color: #fff;
-  height: 60px;
-}
-#top .btn-get-started:hover {
-  padding-top: 10px;
-  color: #d43076;
-}
-
-.navbar ul {
+.row {
   display: flex;
-  list-style: none;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
-.navbar a, .navbar a:focus {
-  padding: 10px 0 10px 30px;
-  font-size: 20px;
-  color: #2c4964;
-  white-space: nowrap;
-}
-.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
-  color: #d43076;
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
 }
 
 #footer {
-  background: #fff;
-  padding: 24px 0;
+  padding: 20px 0;
+  font-size: 20px;
+}
+
+.copyright {
+  text-align: center;
   font-size: 14px;
 }
-#footer .copyright {
-  text-align: center;
+
+#form-id{
+  font-size: 30px;
+  margin-bottom: 10px
 }
 
-.analysis-form {
-  border-radius: 10px;
-  box-shadow: none;
-  font-size: 25px;
-  font-family: "Playfair Display", serif;
+#form-id input:focus {
+  color: #d43076;
 }
-
-//.analysis-form input:focus {
-  //border-color: #d43076;
 
 .button {
   font-family: "Playfair Display", serif;
@@ -88,3 +76,34 @@
   background: #f07fc1;
   border-radius: 5px;
   }
+
+.help .icon-box {
+  padding: 20px 15px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.2);
+  transition: all 0.3s ease-in-out;
+  border-radius: 50px;
+  text-align: center;
+  z-index: 1;
+}
+
+.help .question {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: black;
+}
+
+.help .sub-title {
+  font-weight: 500;
+  font-size: 25px;
+  color: #fefeff;
+}
+
+.help .description {
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 25px;
+}
