@@ -16,8 +16,10 @@
 @import 'bootstrap';
 
 body {
-  font-family: "Open Sans", sans-serif;
-  color: #5a656e;
+  font-family: "Georgia", serif;
+  color: #dadfe2;
+  background: #c20255;
+  text-align: center;
 }
 
 a {
@@ -35,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-bg {
-  background: linear-gradient(180deg, #f2f6f9 0%, #fff 100%);
+  background: #c20255;
 }
 
 .section-title {
@@ -48,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 15px;
   padding-bottom: 15px;
   position: relative;
-  color: #345676;
+  color: #ffffff;
 }
 
 .section-title h2::after {
