@@ -1,5 +1,5 @@
 <% content_for(:title, 'こじらせ診断とは？') %>
-<section id="helps" class="helps section-bg">
+<section id="help" class="help section-bg">
   <div class="container">
     <div class="section-title">
       <h2>こじらせ診断とは？</h2>
@@ -7,19 +7,37 @@
     <div class="sub-title">
       <p>TwitterのアカウントIDを入力するだけでその人がどのくらいこじらせているかを診断するツールです</p>
     </div>
-    <div class="question">
-        <ul>
-          <li>「<span>デートがサイゼリアだった！私ってそんなに安い女なの？</span>」</li>
-          <li>「<span>CHANELのコットンで済むほど女は単純じゃない</span>」</li>
-          <li>「<span>お見合いでロイヤルミルクティーを頼むのは遠慮しましょう</span>」</li>
-          <li>「<span>結婚したいならオタク趣味をやめて普通の人になれ</span>」</li>
-        </ul>
+    <div class="row">
+      <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+        <div class="icon-box">
+          <h2 class="question">気になる人からディナーに誘われた！まさかのサイゼリアだった・・私ってそんなに安い女なの？</h2>
+        </div>
       </div>
-      <div class="description">
-        <p>ネットにはこのような恋愛に関するいろいろな考えがあります</p>
-        <p>モテたい！と思っても誰を信じればいいのかわからない・・</p>
-        <p>そんな時はこじらせ診断をしましょう</p>
+
+      <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+        <div class="icon-box">
+          <h2 class="question">彼女にクリスマスに４℃のハートのネックレスをあげたいんだけど、４℃ってダサいのかな？</h2>
+        </div>
       </div>
+
+      <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+        <div class="icon-box">
+          <h2 class="question">「婚約指輪を折半してほしい」と提案したらケチと言われた・・みんな婚約指輪はプレゼントしてるの？</h2>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+        <div class="icon-box">
+          <h2 class="question">バレンタインデーのお返しにはCHANELのコットン。女性ってみんなCHANEL好きなんでしょ？</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="description">
+      <p>ネットにはこのように恋愛に対して様々な意見があり、誰を信じたらよいのかわからない・・</p>
+      <p>そんなときはこじらせ診断をしましょう！</p>
+    </div>
+
     <div class="mb-5 mt-5">
       <%= button_to '戻る', root_path, method: :get, class: 'back-button' %>
     </div>
