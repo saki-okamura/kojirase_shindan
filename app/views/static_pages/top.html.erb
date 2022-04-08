@@ -9,7 +9,9 @@
       <div class="form-group">
         <%= f.text_field :user, autofocus: true, placeholder: 'IDを入力', class: 'form-control', id: 'form-id' %>
       </div>
-      <%= f.submit '診断する', class: 'button' %>
+      <div class="text-center topbtn">
+        <%= f.submit '診断する', class: 'btn btn-malformation shadow' %>
+      </div>
       <% end %>
     </div>
 </section>
