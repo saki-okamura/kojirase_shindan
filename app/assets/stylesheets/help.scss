@@ -1,0 +1,29 @@
+.help .icon-box {
+  padding: 20px 15px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.2);
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  text-align: center;
+  z-index: 1;
+}
+
+.help .question {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.help .sub-title {
+  font-weight: 500;
+  font-size: 25px;
+  color: #4b7dab;
+}
+
+.help .description {
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 25px;
+}
