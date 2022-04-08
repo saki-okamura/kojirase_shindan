@@ -30,7 +30,7 @@ class ApplicationController < ActionController::Base
   end
 
   def too_many_requests
-    flash.now[:danger] = "リクエストが集中しています\n最大15分待ってから再度試して下さい"
+    flash.now[:danger] = "リクエストが集中しています\n最大15分待ってから再度試して下さい。"
     render 'static_pages/top'
   end
 
@@ -38,4 +38,7 @@ class ApplicationController < ActionController::Base
   Dotenv.load
   HOSTNAME = ENV['HOSTNAME']
 
+  def referrer_root_url?
+    request.referrer != root_url ? redirect_to(root_url) : false
+  end
 end
