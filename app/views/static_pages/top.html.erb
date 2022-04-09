@@ -1,6 +1,6 @@
 <section id="top" class="d-flex flex-column align-items-center justify-content-center">
   <h2>そこのあなた、こじらせてない？</h2>
-  <h1><%= link_to 'こじらせ診断', root_path %></h1>
+  <%= link_to 'こじらせ診断', root_path, class: 'app-title' %>
     <div class="flash-message">
       <%= h(flash[:danger]) %>
     </div>
@@ -17,36 +17,28 @@
 </section>
 <% content_for(:title, 'こじらせ診断とは？') %>
 <section id="help" class="help section-bg">
-  <div class="container">
+  <div class="container-result">
     <div class="section-title">
       <h2>こじらせ診断とは？</h2>
     </div>
     <div class="sub-title">
       <p>TwitterのアカウントIDを入力するだけでその人がどのくらいこじらせているかを診断するツールです</p>
     </div>
-      <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
         <div class="icon-box">
           <h2 class="question">気になる人からディナーに誘われた！まさかの某ファミレスだった。私ってそんなに安い女なの？</h2>
         </div>
-      </div>
 
-      <div class="col-md- col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
         <div class="icon-box">
           <h2 class="question">彼女へクリスマスにハートのネックレスをあげたいんだけど、某アクセサリーブランドってダサいのかな？</h2>
         </div>
-      </div>
 
-      <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
         <div class="icon-box">
           <h2 class="question">「婚約指輪を折半してほしい」と提案したらケチと言われた・・みんな婚約指輪はプレゼントしてるの？</h2>
         </div>
-      </div>
 
-      <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
         <div class="icon-box">
           <h2 class="question">バレンタインデーのお返しはハイブランドのコットン。女性ってみんなハイブラ好きなんでしょ？</h2>
         </div>
-      </div>
 
     <div class="description">
       <p>ネットにはこのように恋愛に対して様々な意見があり、誰を信じたらよいのかわからない・・</p>
