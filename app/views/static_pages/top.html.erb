@@ -4,13 +4,11 @@
     <div class="flash-message">
       <%= h(flash[:danger]) %>
     </div>
-    <div class="mb-2 mt-2">
+    <div id="analysis-button-wrapper">
       <%= form_with url: results_path, method: :get, local: true do |f| %>
       <div class="form-group">
-        <%= f.text_field :user, autofocus: true, placeholder: 'IDを入力', class: 'form-control', id: 'form-id' %>
-      </div>
-      <div class="text-center topbtn">
-        <%= f.submit '診断する', class: 'btn btn-malformation shadow' %>
+        <%= f.text_field :user, class: 'form-control', autofocus: true, placeholder: 'IDを入力', id: 'form-id' %>
+        <%= f.submit '診断する', class: 'analysis-button', onclick:"clickAnalysisButton()", id: 'analysis-button', data: { disable_with: '診断中...' } %>
       </div>
       <% end %>
     </div>
