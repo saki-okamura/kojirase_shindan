@@ -38,6 +38,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .section-bg {
   background: #c20255;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .section-title {
@@ -46,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-title h2 {
-  font-size: 32px;
+  font-size: 50px;
   font-weight: bold;
   margin-bottom: 15px;
   padding-bottom: 15px;
@@ -75,4 +77,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .back-button:hover {
   background: #dd5a92;
+}
+
+.container-result {
+  width: 60%;
+  margin: 0 auto;
+  background-color: rgba(44, 4, 4, 0.432);
+  border: 6px double white;
+  padding-top: 2.3vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 5vh;
 }
