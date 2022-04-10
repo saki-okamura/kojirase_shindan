@@ -8,7 +8,7 @@ class SpecAnalysisService
   end
 
   def call
-    words = ['高い', '安い', '円', '筋トレ', 'ダイエット', '身長', '体重', '年収', '万円', '学歴', '職業', '見た目', 'イケメン']
+    words = ['高い', '安い', '円', '筋トレ', 'ダイエット', '身長', '体重', '年収', '万円', '学歴', '職業', '見た目', 'イケメン', '理想', 'モテ', '可愛い']
     spec = 0
     words.each do |word|
       spec += @tweets.filter{|tweet| tweet.text.include?(word)}.size
@@ -17,9 +17,9 @@ class SpecAnalysisService
     spec_point = case spec
               when 0..5
                 1
-              when 6..20
+              when 6..10
                 1.5
-              when 21..30
+              when 11..20
                 2
               when 21..30
                 2.5

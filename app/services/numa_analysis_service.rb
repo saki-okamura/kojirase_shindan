@@ -9,7 +9,7 @@ class NumaAnalysisService
   end
 
   def call
-    words = ['ザオラル', 'ヤリモク', '既婚者', 'ブロック', '浮気', 'メンヘラ', 'ジム', '筋トレ', 'こんにちわ']
+    words = ['ザオラル', 'ヤリモク', '既婚者', 'ブロック', '浮気', 'メンヘラ', 'ジム', '筋トレ', 'こんにちわ', '男性', '運命', '好き', '不安', 'メイク', 'メンタル']
     numa = 0
     words.each do |word|
       numa += @tweets.filter{|tweet| tweet.text.include?(word)}.size
@@ -18,9 +18,9 @@ class NumaAnalysisService
     numa_point = case numa
               when 0..5
                 1
-              when 6..20
+              when 6..10
                 1.5
-              when 21..30
+              when 11..20
                 2
               when 21..30
                 2.5
