@@ -23,15 +23,12 @@
         //データセット
         datasets: [{
               //背景色
-              backgroundColor: "rgba(236, 23, 183,0.65)",
+              backgroundColor: "rgba(185, 113, 233, 0.937)",
+              pointBackgroundColor: "rgba(114, 5, 187, 0.937)",
               //結合点の枠線の色
-              pointBorderColor: "#fff",
-              //結合点の背景色（ホバ時）
-              pointHoverBackgroundColor: "#fff",
-              //結合点の枠線の色（ホバー時）
-              pointHoverBorderColor: "rgba(200,112,126,1)",
-              //結合点より外でマウスホバーを認識する範囲（ピクセル単位）
-              hitRadius: 5,
+              pointBorderColor: "rgba(114, 5, 187, 0.937)",
+              borderColor: "rgba(114, 5, 187, 0.937)",
+              borderWidth: 2,
               //グラフのデータ
               data: [follower, apo, numa, spec, present]
             }
@@ -47,16 +44,16 @@
         scale: {
           // グリッド線の設定
           gridLines: {
-            color: "#5a656e",
+            color: 'white',
             lineWidth: 2.5
           },
           // 点ラベルの設定
           pointLabels: {
-              fontSize: 15,
-              fontColor: "#345676",
-              fontStyle: "bold"
+            fontSize: 20,
+            fontColor: 'white',
           },
           ticks: {
+            fontColor: 'black',
             display: false,
             min: 0,
             max: 5,
@@ -64,8 +61,8 @@
           },
           angleLines: {
             display: true,
-            color: "#5a656e",
-              lineWidth: 1.5
+            color: "grey",
+            lineWidth: 1.5
           }
         }
       }
