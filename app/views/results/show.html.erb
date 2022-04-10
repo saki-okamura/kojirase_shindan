@@ -4,7 +4,15 @@
     <h3><%= @user.name %>さんの診断結果</h3>
   </div>
   <div class="container-result">
+    <div class="result-title">
+      <p><%= @result_title %></p>
+    </div>
     <%= render 'shared/kojirase_chart' %>
+    <div class="result-message">
+      <ul>
+        <li><%= @result_message %></li>
+      </ul>
+    </div>
     <div class="text-center topbtn">
       <%= button_to '戻る', root_path, method: :get, class: 'btn btn-malformation shadow' %>
     </div>

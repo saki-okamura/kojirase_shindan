@@ -18,9 +18,9 @@ class ApoAnalysisService
     apo_point = case apo
               when 0..5
                 1
-              when 6..20
+              when 6..10
                 1.5
-              when 21..30
+              when 11..20
                 2
               when 21..30
                 2.5

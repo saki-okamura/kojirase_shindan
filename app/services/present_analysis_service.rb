@@ -8,7 +8,7 @@ class PresentAnalysisService
   end
 
   def call
-    words = ['プレゼント', 'CHANEL', 'コットン', 'GUCCI', '4℃', 'クロエ', 'ロイヤルミルクティー', 'サイゼリヤ', '婚約指輪', 'お寿司', '奢り', '奢られ', 'バレンタイン', 'ホワイトデー', 'クリスマス',]
+    words = ['プレゼント', 'CHANEL', 'コットン', 'GUCCI', '4℃', 'クロエ', 'ロイヤルミルクティー', 'サイゼリヤ', '婚約指輪', 'お寿司', '奢り', '奢られ', 'バレンタイン', 'ホワイトデー', 'クリスマス', 'バッグ', 'ネックレス', 'ブランド', 'シャネル', 'グッチ', 'いらない']
     present = 0
     words.each do |word|
       present += @tweets.filter{|tweet| tweet.text.include?(word)}.size
@@ -17,9 +17,9 @@ class PresentAnalysisService
     present_point = case present
               when 0..5
                 1
-              when 6..20
+              when 6..10
                 1.5
-              when 21..30
+              when 11..20
                 2
               when 21..30
                 2.5
