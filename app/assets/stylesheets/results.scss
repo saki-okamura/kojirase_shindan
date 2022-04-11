@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.result-title {
+.kojirase-level {
   font-family: "Playfair Display", serif;
   color: hsl(195, 100%, 99%);
   font-weight: bold;
@@ -10,4 +10,13 @@
   font-size: 50px;
   margin-top: 3px;
   margin-bottom: 50px;
+}
+
+.kojirase-message {
+  font-size: 20px;
+  margin-top: 80px;
+}
+
+.prescription {
+  margin-top: 80px;
 }
