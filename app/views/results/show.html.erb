@@ -4,7 +4,7 @@
     <h3><%= @user.name %>さんの診断結果</h3>
   </div>
   <div class="container-result">
-    <div class="kojirase-level_title">
+    <div class="kojirase-level-title">
       <p><%= @result.kojirase_level_title %></p>
     </div>
       <%= render 'shared/kojirase_chart' %>
@@ -17,35 +17,13 @@
     </div>
     <div class="prescription">
       <h3>処方箋</h3>
-      <h6>重症なので猫を飼い、心を落ち着けましょう</h6>
-        <div class="card-group">
-          <div class="card">
-              <%= image_tag 'cat1.jpeg', class: 'card-img-top' %>
-              <div class="card-body">
-                <div class="card-text">
-                  <p><%= link_to "マンチカン2022/02/06（2ヶ月）生まれの女の子です。毛色はキャリコです。P's-first恵比寿店にいます。お問い合わせお待ちしております。", "https://pfirst.jp/?act=SearchResult&ID=442816" %></p>
-                </div>
-              </div>
-          </div>
-
-          <div class="card">
-            <%= image_tag 'cat2.jpeg', class: 'card-img-top' %>
-            <div class="card-body">
-              <div class="card-text">
-                <p><%= link_to "ラガマフィン2022/02/05（2ヶ月）生まれの男の子です。毛色はブルーホワイトです。P's-first吉祥寺サンロード店にいます。お問い合わせお待ちしております。", "https://pfirst.jp/?act=SearchResult&ID=442431" %></p>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <%= image_tag 'cat3.jpeg', class: 'card-img-top' %>
-            <div class="card-body">
-              <div class="card-text">
-                <p><%= link_to "ミヌエット2022/01/28（3ヶ月）生まれの女の子です。毛色はブラウンタビーです。P's-first麻布十番店にいます。お問い合わせお待ちしております。", "https://pfirst.jp/?act=SearchResult&ID=441816" %></p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <% if @result.kojirase_level == 1 %>
+          <%= render 'shared/result/kojirase_level_low' %>
+        <% elsif @result.kojirase_level == 2 || @result.kojirase_level == 3 %>
+          <%= render 'shared/result/kojirase_level_middle' %>
+        <% else %>
+          <%= render 'shared/result/kojirase_level_high' %>
+        <% end %>
     </div>
   </div>
     <div class="text-center topbtn">

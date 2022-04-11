@@ -5,6 +5,15 @@ class ResultService
   attr_accessor :numa_point
   attr_accessor :present_point
 
+  def initialize(follower_point, spec_point, apo_point, numa_point, present_point)
+    @follower_point = follower_point
+    @spec_point = spec_point
+    @apo_point = apo_point
+    @numa_point = numa_point
+    @present_point = present_point
+
+  end
+
   def kojirase_level
     if  @spec_point <= 1.5 && @apo_point == 1.0 && @numa_point == 1.0
       1
@@ -51,7 +60,7 @@ class ResultService
   end
 
   def follower_message
-    if kojirase_revel == 1 && @follower_point <= 1.5
+    if kojirase_level == 1 && @follower_point <= 1.5
       'こじらせの縮小垢という可能性も存在しています'
     elsif kojirase_level == 1 && @follower_point <= 2.5
       'ツイート内容からは特にこじらせの片鱗が観測されませんでした'
