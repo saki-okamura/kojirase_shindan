@@ -1,10 +1,10 @@
-<input type="hidden" id="follower" value="<%= @follower_point %>">
+    <input type="hidden" id="follower" value="<%= @follower_point %>">
     <input type="hidden" id="apo" value="<%= @apo_point %>">
     <input type="hidden" id="numa" value="<%= @numa_point %>">
     <input type="hidden" id="spec" value="<%= @spec_point %>">
     <input type="hidden" id="present" value="<%= @present_point %>">
 
-    <canvas id="kojiraseChart"></div>
+    <canvas id="kojiraseChart"></canvas>
     <script>
     var follower = document.getElementById('follower').value
     var apo = document.getElementById('apo').value
@@ -19,7 +19,7 @@
       //データの設定
       data: {
         //データ項目のラベル
-        labels: ["インフルエンサー度${follower}", "アポ度${apo}", "沼度", "高望み度", "４℃度"],
+        labels: [`インフルエンサー度 ${follower}`, `アポ度 ${apo}`, `沼度 ${numa}`, ` 高望み度 ${spec}`, `プレゼント度 ${present}`],
         //データセット
         datasets: [{
               //背景色
