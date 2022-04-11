@@ -9,7 +9,7 @@ class ResultsController < ApplicationController
     @present_point = PresentAnalysisService.new(params[:user], twitter_client, tweets).call
     @apo_point = ApoAnalysisService.new(params[:user], twitter_client, tweets).call
     @numa_point = NumaAnalysisService.new(params[:user], twitter_client, tweets).call
-    @result = ResultService.new(follower_point: @follower_point, spec_point: @spec_point, apo_point: @apo_point, numa_point: @numa_point, present_point: @present_point)
+    @result = ResultService.new(@follower_point, @spec_point, @apo_point, @numa_point, @present_point)
 
   end
 
