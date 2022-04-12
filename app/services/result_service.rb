@@ -49,7 +49,7 @@ class ResultService
     when 1
       '今のところはこじらせの傾向はありません'
     when 2
-      '自分でも気づかないこじらせが垣間見えます'
+      '将来こじらせに陥る可能性が高いです'
     when 3
       'こじらせていて沼に陥っている可能性があります'
     when 4
@@ -61,9 +61,9 @@ class ResultService
 
   def follower_message
     if kojirase_level == 1 && @follower_point <= 1.5
-      'こじらせの縮小垢という可能性も存在しています'
+      'こじらせの縮小垢という可能性もわずかに存在しています'
     elsif kojirase_level == 1 && @follower_point <= 2.5
-      'ツイート内容からは特にこじらせの片鱗が観測されませんでした'
+      'ツイート内容からも特にこじらせの片鱗が観測されませんでした'
     elsif kojirase_level == 1 && @follower_point <= 3.5
       'こじらせ界隈ではないですが、バズってフォロワーが増えた可能性もあります'
     elsif kojirase_level == 1 && @follower_point <= 4.5
