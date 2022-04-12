@@ -1,28 +1,25 @@
 class ResultService
-  attr_accessor :follower_point
-  attr_accessor :spec_point
-  attr_accessor :apo_point
-  attr_accessor :numa_point
-  attr_accessor :present_point
+  attr_accessor :follower_point, :spec_point, :apo_point, :numa_point, :desperate_point
 
-  def initialize(follower_point, spec_point, apo_point, numa_point, present_point)
+
+  def initialize(follower_point, spec_point, apo_point, numa_point, desperate_point)
     @follower_point = follower_point
     @spec_point = spec_point
     @apo_point = apo_point
     @numa_point = numa_point
-    @present_point = present_point
+    @desperate_point = desperate_point
   end
 
   def kojirase_level
-    if  @spec_point <= 1.5 && @apo_point == 1.0 && @numa_point == 1.0
+    if  @spec_point == 1 && @apo_point == 1 && @numa_point == 1 && @desperate_point == 1
       1
-    elsif @spec_point <= 2 && @apo_point <= 2 && @numa_point <= 3
+    elsif @spec_point <= 2 && @apo_point <= 2 && @numa_point <= 2 && @desperate_point <= 2
       2
-    elsif @spec_point <= 3 && @apo_point <= 3 && @numa_point <= 3.5
+    elsif @spec_point <= 3 && @apo_point <= 3 && @numa_point <= 3 && @desperate_point <= 3
       3
-    elsif @spec_point <= 4 || @apo_point <= 4 || @numa_point <= 4
+    elsif @spec_point <= 3.5 || @apo_point <= 3.5 || @numa_point <= 3.5 || @desperate_point <= 3.5
       4
-    elsif @spec_point <= 5 || @apo_point <= 5 || @numa_point <= 5
+    elsif @spec_point >= 4 || @apo_point >= 4 || @numa_point >= 4 || @desperate_point >= 4
       5
     end
   end
@@ -112,18 +109,18 @@ class ResultService
     end
   end
 
-  def present_message
-    if present_point == 1
+  def advice_message
+    case kojirase_level
+    when 1
+      '異性からプレゼントをもらった場合は死ぬほど喜んだほうが良いです'
+    when 2
       'ファミレスでデートしても楽しむようにしましょう'
-    elsif present_point == 1.5
-      '某ネックレスをもらっても死ぬほど喜びましょう'
-    elsif present_point == 2
-      'バレンタインデーのお返しがハイブラのコットンでも文句を言わないようにしましょう'
-    elsif present_point == 2.5
-      'お寿司ばかり食べたいと言わないようにしましょう'
-    elsif present_point >= 3
-      '婚約指輪の代金を請求されたらまず話し合うことが大事です'
+    when 3
+      '婚活で疲れていたら休むことも大切です'
+    when 4
+      '異性のスペックだけを見るのでなく、中身も見ましょう'
+    when 5
+      '自分のことを見直すことも必要です'
     end
   end
-
 end

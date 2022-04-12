@@ -12,11 +12,13 @@
       <ul>
         <li><%= @result.kojirase_message %></li>
         <li><%= @result.follower_message %></li>
-        <li><%= @result.present_message %></li>
+        <li><%= @result.advice_message %></li>
       </ul>
     </div>
     <div class="prescription">
-      <h3>処方箋</h3>
+      <div class="prescription-title">
+        <h2>処方箋</2>
+      </div>
         <% if @result.kojirase_level == 1 %>
           <%= render 'shared/result/kojirase_level_low' %>
         <% elsif @result.kojirase_level == 2 || @result.kojirase_level == 3 %>

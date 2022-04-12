@@ -2,7 +2,7 @@
     <input type="hidden" id="apo" value="<%= @apo_point %>">
     <input type="hidden" id="numa" value="<%= @numa_point %>">
     <input type="hidden" id="spec" value="<%= @spec_point %>">
-    <input type="hidden" id="present" value="<%= @present_point %>">
+    <input type="hidden" id="desperate" value="<%= @desperate_point %>">
 
     <canvas id="kojiraseChart"></canvas>
     <script>
@@ -10,7 +10,7 @@
     var apo = document.getElementById('apo').value
     var numa = document.getElementById('numa').value
     var spec = document.getElementById('spec').value
-    var present = document.getElementById('present').value
+    var desperate = document.getElementById('desperate').value
 
     var ctx = document.getElementById("kojiraseChart");
     var kojiraseChart = new Chart(ctx, {
@@ -19,7 +19,7 @@
       //データの設定
       data: {
         //データ項目のラベル
-        labels: [`インフルエンサー度 ${follower}`, `アポ度 ${apo}`, `沼度 ${numa}`, ` 高望み度 ${spec}`, `プレゼント度 ${present}`],
+        labels: [`インフルエンサー度 ${follower}`, `アポ度 ${apo}`, `沼度 ${numa}`, `高望み度 ${spec}`, `生き遅れ度${desperate}`],
         //データセット
         datasets: [{
               //背景色
@@ -30,7 +30,7 @@
               borderColor: "rgba(114, 5, 187, 0.937)",
               borderWidth: 2,
               //グラフのデータ
-              data: [follower, apo, numa, spec, present]
+              data: [follower, apo, numa, spec, desperate]
             }
           ]
       },

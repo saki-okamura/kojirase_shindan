@@ -9,7 +9,7 @@ class ApoAnalysisService
   end
 
   def call
-    words = ['アポ', 'マッチングアプリ', '結婚相談所', '相席屋', '婚活', '仮交際', 'デート', '真剣交際', '会いたい', '打診', '土日', 'ブロック', 'FO', '予約', '待ち合わせ', 'お見合い']
+    words = ['アポ', 'マッチングアプリ', '結婚相談所', '相席屋', '婚活', '仮交際', 'デート', '真剣交際', '打診', '土日', 'ブロック', 'FO', '予約', '待ち合わせ', 'お見合い', 'ラウンジ', 'LINE', 'ライン']
     apo = 0
     words.each do |word|
       apo += @tweets.filter{|tweet| tweet.text.include?(word)}.size
