@@ -1,6 +1,5 @@
 class NumaAnalysisService
-  # 恋愛に対してマイナスのワードや自分磨きに関するワード
-  # 沼度の診断
+  # 恋愛していてメンヘラになっている度合い
 
   def initialize(user, twitter_client, tweets)
     @user = user
@@ -9,7 +8,7 @@ class NumaAnalysisService
   end
 
   def call
-    words = ['ザオラル', 'ヤリモク', '既婚者', 'ブロック', '浮気', 'メンヘラ', 'ジム', '筋トレ', 'こんにちわ', '男性', '運命', '好き', '不安', 'メイク', 'メンタル']
+    words = ['ザオラル', 'ヤリモク', '既婚者', 'ブロック', '浮気', 'メンヘラ', '男性', '運命', '好き', '不安', 'メンタル', 'モラハラ']
     numa = 0
     words.each do |word|
       numa += @tweets.filter{|tweet| tweet.text.include?(word)}.size
