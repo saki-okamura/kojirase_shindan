@@ -1,45 +1,59 @@
 <section id="top" class="d-flex flex-column align-items-center justify-content-center">
   <h2>そこのあなた、こじらせてない？</h2>
-  <%= link_to 'こじらせ診断', root_path, class: 'app-title' %>
+    <div class="app-title">
+      <h1>こじらせ診断<h1>
+    </div>
+</section>
+  <div class="container">
+    <div class="sub-title">
+      <h1>ツイッターのIDを入力するだけで</h1>
+      <h1>あなたのこじらせ度を診断します！</h1>
+    </div>
+
+    <div class='top-image p-6'>
+      <%= image_tag 'kesyou_jirai_make', size: '600x600' %>
+    </div>
+
+    <div class="box-wrapper">
+      <div class="box">
+        <div class="img">
+          <%= image_tag 'text1'%>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="img">
+          <%= image_tag 'text2'%>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="img">
+          <%= image_tag 'text3'%>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="img">
+          <%= image_tag 'text4'%>
+        </div>
+      </div>
+    </div>
+
     <div class="flash-message">
       <%= h(flash[:danger]) %>
     </div>
+
     <div id="analysis-button-wrapper">
       <%= form_with url: results_path, method: :get, local: true do |f| %>
-      <div class="form-group">
-        <%= f.text_field :user, class: 'form-control', autofocus: true, placeholder: 'IDを入力', id: 'form-id' %>
-        <%= f.submit '診断する', class: 'analysis-button', onclick:"clickAnalysisButton()", id: 'analysis-button', data: { disable_with: '診断中...' } %>
-      </div>
+        <div class="form-contents">
+          <%= f.text_field :user, autofocus: true, placeholder: 'IDを入力', id: 'form-id' %>
+        </div>
+        <div class="form-contents">
+          <%= f.submit '診断する', class: 'analysis-button', onclick:"clickAnalysisButton()", id: 'analysis-button', data: { disable_with: '診断中...' } %>
+        </div>
       <% end %>
     </div>
-</section>
-<% content_for(:title, 'こじらせ診断とは？') %>
-<section id="help" class="help section-bg">
-  <div class="container-result">
-    <div class="section-title">
-      <h2>こじらせ診断とは？</h2>
-    </div>
-    <div class="sub-title">
-      <p>TwitterのアカウントIDを入力するだけでその人がどのくらいこじらせているかを診断するツールです</p>
-    </div>
-        <div class="icon-box">
-          <h2 class="question">気になる人からディナーに誘われた！まさかの某ファミレスだった。私ってそんなに安い女なの？</h2>
-        </div>
 
-        <div class="icon-box">
-          <h2 class="question">彼女へクリスマスにハートのネックレスをあげたいんだけど、某アクセサリーブランドってダサいのかな？</h2>
-        </div>
-
-        <div class="icon-box">
-          <h2 class="question">「婚約指輪を折半してほしい」と提案したらケチと言われた・・みんな婚約指輪はプレゼントしてるの？</h2>
-        </div>
-
-        <div class="icon-box">
-          <h2 class="question">バレンタインデーのお返しはハイブランドのコットン。女性ってみんなハイブラ好きなんでしょ？</h2>
-        </div>
-
-    <div class="description">
-      <p>ネットにはこのように恋愛に対して様々な意見があり、誰を信じたらよいのかわからない・・</p>
-      <p>そんなときはこじらせ診断をしましょう！</p>
-    </div>
+  </div>
 </section>
