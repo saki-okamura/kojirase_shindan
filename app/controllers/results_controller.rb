@@ -1,5 +1,5 @@
 class ResultsController < ApplicationController
-  before_action :referrer_root_url?, only: %i(show)
+  #before_action :referrer_root_url?, only: %i(show)
 
   def show
     @user = twitter_client.user(params[:user])
