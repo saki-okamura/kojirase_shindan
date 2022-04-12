@@ -51,7 +51,7 @@
 }
 
 .analysis-button:hover{
-  background:hsla(276, 98%, 16%, 0.937);
+  background: hsl(295, 64%, 19%);
   color:#ffff;
 }
 
@@ -68,7 +68,7 @@ button:hover:before,button:hover:after{
 }
 
 #form-id:focus {
-  border-color: #0a0005;
+  border-color: hsl(295, 64%, 19%);
   outline: none;
 }
 
@@ -94,16 +94,23 @@ button:hover:before,button:hover:after{
   margin-top: 50px;
 }
 
+.box-wrapper {
+  margin-top: 80px;
+}
+
 .box {
   display: flex;
   padding:20px;
 }
+
 .box .img {
   margin: 0 20px 0 0;
 }
+
 .box:nth-child(even) {
   flex-direction: row-reverse;
 }
+
 .box:nth-child(even) .img {
   margin: 0 0 0 20px;
 }
