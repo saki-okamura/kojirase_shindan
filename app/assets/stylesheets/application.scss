@@ -15,37 +15,27 @@
  */
 @import 'bootstrap';
 
+
 body {
-  font-family: "Playfair Display", serif;
+  font-family: "07あかずきんポップ" ;
   color: hsl(195, 100%, 99%);
-  background: #c20255;
+  background: rgb(69, 16, 100);
   text-align: left;
 }
 
 a {
-  color: #d43076;
+  color: #fffefe;
   text-decoration: none;
 }
 
 a:hover {
-  color: #dd5a92;
+  color: rgb(86, 6, 97);
   text-decoration: none;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display", serif;
-}
-
-.section-bg {
-  background: #c20255;
-  margin-top: 100px;
-  margin-bottom: 100px;
 }
 
 .section-title {
   padding-top: 30px;
   padding-bottom: 30px;
-  text-align: center;
 }
 
 .section-title h3 {
@@ -84,11 +74,9 @@ h1, h2, h3, h4, h5, h6 {
   background: #dd5a92;
 }
 
-.container-result {
+.container {
   width: 70%;
   margin: 0 auto;
-  background-color: hsla(328, 91%, 14%, 0.431);
-  border: 6px double white;
   padding-top: 5vh;
   padding-left: 5vw;
   padding-right: 5vw;
