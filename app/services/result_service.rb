@@ -11,7 +11,6 @@ class ResultService
     @apo_point = apo_point
     @numa_point = numa_point
     @present_point = present_point
-
   end
 
   def kojirase_level
@@ -114,10 +113,16 @@ class ResultService
   end
 
   def present_message
-    if present_point >= 2
+    if present_point == 1
       'ファミレスでデートしても楽しむようにしましょう'
-    else
+    elsif present_point == 1.5
       '某ネックレスをもらっても死ぬほど喜びましょう'
+    elsif present_point == 2
+      'バレンタインデーのお返しがハイブラのコットンでも文句を言わないようにしましょう'
+    elsif present_point == 2.5
+      'お寿司ばかり食べたいと言わないようにしましょう'
+    elsif present_point >= 3
+      '婚約指輪の代金を請求されたらまず話し合うことが大事です'
     end
   end
 
