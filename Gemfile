@@ -24,8 +24,9 @@ gem 'jbuilder', '~> 2.7'
 
 # twitter
 gem 'twitter'
-#gem 'simple_twitter'
-#gem 'tweetkit'
+
+gem 'google-api-client'
+
 # 環境変数を簡単に利用できるgem
 gem 'dotenv-rails'
 
@@ -37,6 +38,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'bootstrap'
 gem 'jquery-rails'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
