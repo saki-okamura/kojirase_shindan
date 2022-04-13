@@ -1,15 +1,28 @@
 class ResultsController < ApplicationController
+  GOOGLE_API_KEY = ENV['GOOGLE_API_KEY']
 
   def show
+
+    # 送られてきたIDからユーザーを取得
     @user = twitter_client.user(params[:user])
+
+    # ユーザーのタイムライン200件取得
     tweets = twitter_client.user_timeline(params[:user], count: 200, tweet_mode: 'extended')
+
+    # グラフに使うポイント取得
     @follower_point = FollowerAnalysisService.new(params[:user], twitter_client).call
     @spec_point = SpecAnalysisService.new(params[:user], twitter_client, tweets).call
     @desperate_point = DesperateAnalysisService.new(params[:user], twitter_client, tweets).call
     @apo_point = ApoAnalysisService.new(params[:user], twitter_client, tweets).call
     @numa_point = NumaAnalysisService.new(params[:user], twitter_client, tweets).call
+
+    # 診断結果
     @result = ResultService.new(@follower_point, @spec_point, @apo_point, @numa_point, @desperate_point)
 
+    # youtube
+    @matching_app_youtube_date = find_videos('マッチングアプリ')
+    @panda_youtube_date = find_videos('パンダ')
+    @cat_youtube_data = find_videos('猫')
   end
 
   private
@@ -23,4 +36,20 @@ class ResultsController < ApplicationController
     end
   end
 
+  def find_videos(keyword, after: 1.months.ago, before: Time.now)
+    service = Google::Apis::YoutubeV3::YouTubeService.new
+    service.key = GOOGLE_API_KEY
+
+    next_page_token = nil
+    opt = {
+      q: keyword,
+      type: 'video',
+      max_results: 3,
+      order: :date,
+      page_token: next_page_token,
+      published_after: after.iso8601,
+      published_before: before.iso8601
+    }
+    service.list_searches(:snippet, opt)
+  end
 end

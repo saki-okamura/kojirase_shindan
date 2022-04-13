@@ -25,7 +25,7 @@ gem 'jbuilder', '~> 2.7'
 # twitter
 gem 'twitter'
 
-gem 'google-api-client'
+gem 'google-api-client', '0.9.20', require: 'google/apis/youtube_v3'
 
 # 環境変数を簡単に利用できるgem
 gem 'dotenv-rails'

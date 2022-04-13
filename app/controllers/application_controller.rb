@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
 
   # 存在しないページへのアクセス時でのエラー
   def render_404
-    render template: 'errors/error_404', status: 404
+    render template: 'public/404', status: 404
   end
 
   def unauthorized

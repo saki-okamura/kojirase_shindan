@@ -47,7 +47,7 @@ class ResultService
     when 2
       '将来こじらせに陥る可能性が高いです'
     when 3
-      'こじらせていて沼に陥っている可能性があります'
+      'こじらせ沼に陥っている可能性があります'
     when 4
       '異性に求めるレベルが高くなっている傾向があります'
     when 5
@@ -63,7 +63,7 @@ class ResultService
     elsif kojirase_level == 1 && @follower_point <= 3.5
       'こじらせ界隈ではないですが、バズってフォロワーが増えた可能性もあります'
     elsif kojirase_level == 1 && @follower_point <= 4.5
-      '影響力があるアカウントなのでツイートを真似してみましょう'
+      'そこそこ有名なのでこじらせツイートをするとバズるかもしれないです'
     elsif kojirase_level == 1 && @follower_point <= 5
       'インフルエンサーの素質があるのでこじらせツイートをしたときにはバズるかもしれません'
     elsif kojirase_level == 2 && @follower_point <= 1.5
@@ -81,7 +81,7 @@ class ResultService
     elsif kojirase_level == 3 && @follower_point <= 2.5
       '一見普通のアカウントのようですが、覗いてみると闇が感じられます'
     elsif kojirase_level == 3 && @follower_point <= 3.5
-      '恋愛についてのツイートが多めです。参考程度に覗いてみましょう'
+      'こじらせ界隈の有名人かもしれません'
     elsif kojirase_level == 3 && @follower_point <= 4.5
       '恋愛についてのツイートでバズったかもしれません'
     elsif kojirase_level == 3 && @follower_point <= 5
