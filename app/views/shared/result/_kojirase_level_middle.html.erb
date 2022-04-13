@@ -1,9 +1,10 @@
 <h3>一旦パンダの動画を観て心を落ち着かせましょう</h3>
+<div class="youtube-videos p-5" style="width: 40rem;">
   <% @panda_youtube_date.items.each do |item| %>
   <% snippet = item.snippet %>
     <div class="card-group">
       <div class="card">
-        <iframe src="https://www.youtube.com/embed/<%= item.id.video_id %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe height="300" src="https://www.youtube.com/embed/<%= item.id.video_id %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <div class="card-body">
           <div class="card-text">
             <h3><%= snippet.title %></h2>
@@ -12,3 +13,4 @@
       </div>
     </div>
   <% end %>
+</div>

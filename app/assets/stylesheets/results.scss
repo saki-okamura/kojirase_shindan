@@ -24,14 +24,18 @@
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: center;
+  font-size: 50px;
+  font-weight: bold;
 }
 
 .card-body {
-  background-color: #992886;
+  background-color: hsl(0, 0%, 0%);
 }
 
 .card-group {
-  width: auto;
-  height: auto;
-  margin-bottom: 30px;
+  border: 30px solid #000000;
+}
+
+.youtube-videos {
+  text-align: center;
 }
