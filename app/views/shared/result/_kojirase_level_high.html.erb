@@ -1,29 +1,14 @@
-<h2>重症なので猫を飼い、心を落ち着けましょう</h2>
-  <div class="card-group">
-    <div class="card">
-      <%= image_tag 'cat1.jpeg', class: 'card-img-top' %>
-      <div class="card-body">
-        <div class="card-text">
-          <p><%= link_to "マンチカン2022/02/06（2ヶ月）生まれの女の子です。毛色はキャリコです。P's-first恵比寿店にいます。お問い合わせお待ちしております。", "https://pfirst.jp/?act=SearchResult&ID=442816" %></p>
+<h3>重症なので猫の動画を観て、心を落ち着けましょう</h3>
+  <% @cat_youtube_data.items.each do |item| %>
+  <% snippet = item.snippet %>
+    <div class="card-group">
+      <div class="card">
+        <iframe src="https://www.youtube.com/embed/<%= item.id.video_id %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="card-body">
+          <div class="card-text">
+            <h3><%= snippet.title %></h2>
+          </div>
         </div>
       </div>
     </div>
-
-    <div class="card">
-      <%= image_tag 'cat2.jpeg', class: 'card-img-top' %>
-      <div class="card-body">
-        <div class="card-text">
-          <p><%= link_to "ラガマフィン2022/02/05（2ヶ月）生まれの男の子です。毛色はブルーホワイトです。P's-first吉祥寺サンロード店にいます。お問い合わせお待ちしております。", "https://pfirst.jp/?act=SearchResult&ID=442431" %></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <%= image_tag 'cat3.jpeg', class: 'card-img-top' %>
-      <div class="card-body">
-        <div class="card-text">
-          <p><%= link_to "ミヌエット2022/01/28（3ヶ月）生まれの女の子です。毛色はブラウンタビーです。P's-first麻布十番店にいます。お問い合わせお待ちしております。", "https://pfirst.jp/?act=SearchResult&ID=441816" %></p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <% end %>
