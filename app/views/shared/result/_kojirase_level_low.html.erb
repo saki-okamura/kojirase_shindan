@@ -1,14 +1,16 @@
-<h3>こじらせる前にマッチングアプリの研究をすると良いかもしれません</h3>
+<h3>こじらせる前にマッチングアプリの研究をしましょう</h3>
+<div class="youtube-videos p-5" style="width: 40rem;">
   <% @matching_app_youtube_date.items.each do |item| %>
   <% snippet = item.snippet %>
     <div class="card-group">
       <div class="card">
-        <iframe src="https://www.youtube.com/embed/<%= item.id.video_id %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe height="300" src="https://www.youtube.com/embed/<%= item.id.video_id %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <div class="card-body">
           <div class="card-text">
-            <h3><%= snippet.title %></h2>
+            <h4><%= snippet.title %></h4>
           </div>
         </div>
       </div>
     </div>
   <% end %>
+</div>
