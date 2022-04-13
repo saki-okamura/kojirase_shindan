@@ -51,27 +51,40 @@ a:hover {
   color: #ffffff;
 }
 
-.topbtn {
+// 戻るボタン
+
+.back-btn {
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
-.topbtn input.btn-malformation {
-  background: hsl(315, 90%, 28%);
-  font-size: 30px;
-  border: 0;
-  padding: 1rem 4rem;
+.back-btn input.btn-malformation {
+  height: 80px;
+  font-size: 50px;
+  padding:0 2em;
+  border-radius: 5px;
   color: #fff;
-  transition: 0.4s;
-  border-radius: 30px;
+  outline:none;
+  margin-bottom: 100px;
+  font-weight: bold;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  7px 7px 20px 0px rgba(0,0,0,.1),
+  4px 4px 5px 0px rgba(0,0,0,.1);
+  background: linear-gradient(0deg, #04000a 0%, #442079 100%);
+  border: none;
+  outline: none;
+}
+
+.back-btn input.btn-malformation:hover{
+  background: linear-gradient(0deg, rgb(98, 0, 255) 0%, rgb(153, 0, 255) 100%);
+  color:#ffff;
 }
 
 .text-center {
   text-align: center;
-}
-
-.back-button:hover {
-  background: #dd5a92;
 }
 
 .container {
