@@ -20,9 +20,9 @@ class ResultsController < ApplicationController
     @result = ResultService.new(@follower_point, @spec_point, @apo_point, @numa_point, @desperate_point)
 
     # youtube
-    @matching_app_youtube_date = find_videos('マッチングアプリ')
-    @panda_youtube_date = find_videos('パンダ')
-    @cat_youtube_data = find_videos('猫 癒し')
+    #@matching_app_youtube_date = find_videos('マッチングアプリ')
+    #@panda_youtube_date = find_videos('パンダ')
+    #@cat_youtube_data = find_videos('猫 癒し')
   end
 
   private
