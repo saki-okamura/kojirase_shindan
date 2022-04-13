@@ -36,22 +36,30 @@
   opacity: 0.33;
 }
 
+//診断するボタン
+
 .analysis-button {
-  background: hsl(315, 90%, 28%);
-  border: none;
   height: 80px;
   font-size: 50px;
-  border: 0;
   padding:0 2em;
+  border-radius: 5px;
   color: #fff;
-  transition:800ms ease all;
   outline:none;
   margin-bottom: 100px;
   font-weight: bold;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  7px 7px 20px 0px rgba(0,0,0,.1),
+  4px 4px 5px 0px rgba(0,0,0,.1);
+  background: linear-gradient(0deg, #04000a 0%, #442079 100%);
+  border: none;
+  outline: none;
 }
 
 .analysis-button:hover{
-  background: hsl(295, 64%, 19%);
+  background: linear-gradient(0deg, rgb(98, 0, 255) 0%, rgb(153, 0, 255) 100%);
   color:#ffff;
 }
 
@@ -60,22 +68,28 @@ button:hover:before,button:hover:after{
   transition:800ms ease all;
 }
 
+//ID入力フォーム
+
 #form-id{
-  font-size: 40px;
+  border-radius: 5px;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  7px 7px 20px 0px rgba(0,0,0,.1),
+  4px 4px 5px 0px rgba(0,0,0,.1);
+  font-size: 60px;
   height: 150px;
   background: #fff;
-  border: 20px solid hsl(315, 90%, 28%);
+  border: 20px solid #442079 ;
 }
 
 #form-id:focus {
-  border-color: hsl(295, 64%, 19%);
+  border-color: hsl(276, 88%, 37%);
   outline: none;
 }
 
 .form-contents{
   display:block;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .flash-message{
