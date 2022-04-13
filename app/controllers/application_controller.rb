@@ -11,12 +11,12 @@ class ApplicationController < ActionController::Base
 
 
   #def render_500
-    #render template: 'errors/error_500', status: 500
+    #render file: "#{Rails.root}/public/500.html", layout: false, status: 505
   #end
 
   # 存在しないページへのアクセス時でのエラー
   def render_404
-    render template: 'public/404', status: 404
+    render file: "#{Rails.root}/public/404.html", layout: false, status: 404
   end
 
   def unauthorized
@@ -38,7 +38,4 @@ class ApplicationController < ActionController::Base
   Dotenv.load
   HOSTNAME = ENV['HOSTNAME']
 
-  def referrer_root_url?
-    request.referrer != root_url ? redirect_to(root_url) : false
-  end
 end
