@@ -95,3 +95,17 @@ a:hover {
   padding-right: 5vw;
   padding-bottom: 5vh;
 }
+
+@media screen and ( max-width:550px) {
+  .container{
+    width: 90%;
+    margin-top: 4vh;
+  }
+}
+
+@media screen and (min-width:551px) and ( max-width:1024px) {
+  .container{
+    width: 90%;
+    margin-top: 4vh;
+  }
+}
