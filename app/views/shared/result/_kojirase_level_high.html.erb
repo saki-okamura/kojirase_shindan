@@ -1,8 +1,8 @@
-<h3>重症なので猫の動画を観て、心を落ち着けましょう</h3>
+<h3 class="prescription-contents is-opacity" id="prescription-contents">重症なので猫の動画を観て、心を落ち着けましょう</h3>
 <div class="youtube-videos p-5" style="width: 40rem;">
   <% @cat_youtube_data.items.each do |item| %>
   <% snippet = item.snippet %>
-    <div class="card-group">
+    <div class="card-group is-opacity" id="card-group">
       <div class="card">
         <iframe height="300" src="https://www.youtube.com/embed/<%= item.id.video_id %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <div class="card-body">

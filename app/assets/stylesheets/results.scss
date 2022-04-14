@@ -2,14 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.kojirase-level-title {
+#kojirase-level-title {
   color: hsl(195, 100%, 99%);
   font-weight: bold;
   text-align: center;
   font-size: 50px;
   margin-top: 3px;
   margin-bottom: 50px;
+  font-size: 100px;
 }
+
 
 .kojirase-message {
   font-size: 30px;
@@ -20,7 +22,7 @@
   margin-top: 80px;
 }
 
-.analysis-name {
+.result-name {
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: center;

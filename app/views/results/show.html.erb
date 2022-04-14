@@ -1,24 +1,35 @@
 <% content_for(:title, '診断結果') %>
 <section id="results" class="results section-bg">
   <div class="container">
-    <div class="analysis-name">
-      <h1><%= @user.name %>さんの診断結果</h1>
-    </div>
-    <div class="kojirase-level-title">
-      <h1><%= @result.kojirase_level_title %></h1>
-    </div>
-      <%= render 'shared/kojirase_chart' %>
-    <div class="kojirase-message">
-      <ul>
-        <li><%= @result.kojirase_message %></li>
-        <li><%= @result.follower_message %></li>
-        <li><%= @result.advice_message %></li>
-      </ul>
-    </div>
-    <div class="prescription">
-      <div class="prescription-title">
-        <h1>処方箋</h1>
+    <div class="result-wrapper">
+      <!-- 結果表示ページ -->
+
+      <!-- 名前表示 -->
+      <div class="result-name">
+        <h1 class="result-name is-opacity" id="result-name"><%= @user.name %>さんの診断結果</h1>
       </div>
+
+      <!-- こじらせレベル表示 -->
+      <div id="kojirase-level-title">
+        <h1 class="kojirase-level-title is-opacity" id="kojirase-level-title"><%= @result.kojirase_level_title %></h1>
+      </div>
+
+
+      <!-- グラフ表示 -->
+      <%= render 'shared/kojirase_chart' %>
+
+      <!-- こじらせメッセージ -->
+      <div class="kojirase-message">
+        <ul>
+          <li class="kojirase-message is-opacity" id="kojirase-message"><%= @result.kojirase_message %></li>
+          <li class="follower-message is-opacity" id="follower-message"><%= @result.follower_message %></li>
+          <li class="advice-message is-opacity" id="advice-message"><%= @result.advice_message %></li>
+        </ul>
+      </div>
+
+      <!-- 処方箋 -->
+      <div class="prescription">
+        <h1 class="prescription-label is-opacity" id="prescription-label">処方箋</h1>
         <% if @result.kojirase_level == 1 %>
           <%#= render 'shared/result/kojirase_level_low' %>
         <% elsif @result.kojirase_level == 2 || @result.kojirase_level == 3 %>
@@ -26,9 +37,11 @@
         <% else %>
           <%#= render 'shared/result/kojirase_level_high' %>
         <% end %>
+      </div>
     </div>
   </div>
-    <div class="text-center back-btn">
-      <%= button_to 'トップへ戻る', root_path, method: :get, class: 'btn btn-malformation shadow' %>
-    </div>
+
+  <div class="text-center back-btn">
+    <%= button_to 'トップへ戻る', root_path, method: :get, class: 'btn btn-malformation shadow' %>
+  </div>
 </section>
