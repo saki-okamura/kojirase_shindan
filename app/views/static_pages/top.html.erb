@@ -1,62 +1,60 @@
 <section id="top" class="d-flex flex-column align-items-center justify-content-center">
   <%= image_tag 'logo' %>
 </section>
-  <div class="container">
-    <div class="sub-title">
-      <h1>ツイッターのIDを入力するだけで</h1>
-      <h1>あなたのこじらせ度を診断します！</h1>
-    </div>
-
-    <div class='top-image p-6'>
-      <%= image_tag '22388351', size: '800x600' %>
-    </div>
-
-    <div class="box-wrapper">
-      <div class="box">
-        <div class="img">
-          <%= image_tag 'text1', size: '600x600' %>
-        </div>
-      </div>
-
-      <div class="box">
-        <div class="img">
-          <%= image_tag 'text2', size: '600x600' %>
-        </div>
-      </div>
-
-      <div class="box">
-        <div class="img">
-          <%= image_tag 'text3', size: '600x600' %>
-        </div>
-      </div>
-
-      <div class="box">
-        <div class="img">
-          <%= image_tag 'text4', size: '600x600' %>
-        </div>
-      </div>
-    </div>
-
-    <div class="sub-title">
-      <h1>どれかひとつ当てはまったあなたは</h1>
-      <h1>実はこじらせているかも？</h1>
-      <h1>いますぐ診断しましょう！</h1>
-    </div>
-
-    <div class="flash-message">
-      <%= h(flash[:danger]) %>
-    </div>
-
-    <div id="analysis-button-wrapper">
-      <%= form_with url: results_path, method: :get, local: true do |f| %>
-        <div class="form-contents">
-          <%= f.text_field :user, autofocus: true, class: 'form-control', placeholder: 'IDを入力', id: 'form-id' %>
-        </div>
-        <div class="form-contents">
-          <%= f.submit '診断する', class: 'analysis-button', onclick:"clickAnalysisButton()", id: 'analysis-button', data: { disable_with: '診断中...' } %>
-        </div>
-      <% end %>
-    </div>
-
+<div class="container">
+  <div class="sub-title">
+    <h1>ツイッターのIDを入力するだけで</h1>
+    <h1>あなたのこじらせ度を診断します！</h1>
   </div>
-</section>
+
+  <div class='top-image'>
+    <%= image_tag 'top-girl' %>
+  </div>
+
+  <div class="box-wrapper">
+    <div class="box">
+      <div class="img">
+        <%= image_tag 'text1', size: '600x600' %>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="img">
+        <%= image_tag 'text2', size: '600x600' %>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="img">
+        <%= image_tag 'text3', size: '600x600' %>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="img">
+        <%= image_tag 'text4', size: '600x600' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-title">
+    <h1>どれかひとつ当てはまったあなたは</h1>
+    <h1>実はこじらせているかも？</h1>
+    <h1>いますぐ診断しましょう！</h1>
+  </div>
+
+  <div class="flash-message">
+    <%= h(flash[:danger]) %>
+  </div>
+
+  <div id="analysis-button-wrapper">
+    <%= form_with url: results_path, method: :get, local: true do |f| %>
+      <div class="form-contents">
+        <%= f.text_field :user, autofocus: true, class: 'form-control', placeholder: 'IDを入力', id: 'form-id' %>
+      </div>
+      <div class="form-contents">
+        <%= f.submit '診断する', class: 'analysis-button', onclick:"clickAnalysisButton()", id: 'analysis-button', data: { disable_with: '診断中...' } %>
+      </div>
+    <% end %>
+  </div>
+</div>
