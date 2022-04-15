@@ -5,35 +5,19 @@
   background-size: cover;
 }
 
-.app-title {
-  font-weight: 900;
-  margin-bottom: 50px;
-  text-shadow: 5px 10px 1px rgba(63, 62, 62, 0.938);
-  h1 {
-    font-size: 200px;
-  }
-}
-
 .top-girl {
   max-width: 100%;
   height: auto;
 }
 
-
 .sub-title {
   margin-top: 30px;
   margin-bottom: 30px;
+  text-align: center;
   h1 {
-    font-size: 50px;
-    text-align: center;
+    font-size: 3vw;
+    display: inline-block;
   }
-}
-
-#top h2 {
-  color: #eee;
-  margin-bottom: 10px;
-  font-size: 40px;
-  font-weight: 500;
 }
 
 .copyright {
@@ -42,11 +26,16 @@
   opacity: 0.33;
 }
 
+.logo-img {
+  max-width: 100%;
+  height: auto;
+}
+
 //診断するボタン
 
 .analysis-button {
   height: 80px;
-  font-size: 50px;
+  font-size: 3vw;
   padding:0 2em;
   border-radius: 5px;
   color: #fff;
@@ -77,7 +66,7 @@
   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
   7px 7px 20px 0px rgba(0,0,0,.1),
   4px 4px 5px 0px rgba(0,0,0,.1);
-  font-size: 60px;
+  font-size: 5vw;
   height: 150px;
   background: #fff;
   border: 20px solid #442079 ;
