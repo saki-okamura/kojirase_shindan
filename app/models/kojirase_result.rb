@@ -1,0 +1,3 @@
+class KojiraseResult < ApplicationRecord
+
+end
