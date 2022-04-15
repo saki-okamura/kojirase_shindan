@@ -11,7 +11,7 @@
 
       <!-- こじらせレベル表示 -->
       <div class="kojirase-level-title">
-        <h1 class="kojirase-level-title is-opacity" id="kojirase-level-title"><%= @result.kojirase_level_title %></h1>
+        <h1 class="kojirase-level-title is-opacity" id="kojirase-level-title"><%= @kojirase_result.name %></h1>
       </div>
 
 
@@ -21,9 +21,9 @@
       <!-- こじらせメッセージ -->
       <div class="kojirase-message">
         <ul>
-          <li class="kojirase-message is-opacity" id="kojirase-message"><%= @result.kojirase_message %></li>
-          <li class="follower-message is-opacity" id="follower-message"><%= @result.follower_message %></li>
-          <li class="advice-message is-opacity" id="advice-message"><%= @result.advice_message %></li>
+          <li class="kojirase-message is-opacity" id="kojirase-message"><%= @kojirase_result.description %></li>
+          <li class="follower-message is-opacity" id="follower-message"><%#= @result.follower_message %></li>
+          <li class="advice-message is-opacity" id="advice-message"><%= @kojirase_result.advice %></li>
         </ul>
       </div>
 
