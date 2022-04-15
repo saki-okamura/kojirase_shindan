@@ -31,11 +31,11 @@
       <div class="prescription">
         <h1 class="prescription-label is-opacity" id="prescription-label">処方箋</h1>
         <% if @result.kojirase_level == 1 %>
-          <%#= render 'shared/result/kojirase_level_low' %>
+          <%= render 'shared/result/kojirase_level_low' %>
         <% elsif @result.kojirase_level == 2 || @result.kojirase_level == 3 %>
-          <%#= render 'shared/result/kojirase_level_middle' %>
+          <%= render 'shared/result/kojirase_level_middle' %>
         <% else %>
-          <%#= render 'shared/result/kojirase_level_high' %>
+          <%= render 'shared/result/kojirase_level_high' %>
         <% end %>
       </div>
     </div>
