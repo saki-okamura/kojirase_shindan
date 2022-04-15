@@ -17,7 +17,9 @@ class ResultsController < ApplicationController
     @numa_point = NumaAnalysisService.new(params[:user], twitter_client, tweets).call
 
     # 診断結果
-    @result = ResultService.new(@follower_point, @spec_point, @apo_point, @numa_point, @desperate_point)
+    kojirase_level = ResultService.new(@follower_point, @spec_point, @apo_point, @numa_point, @desperate_point).kojirase_level
+
+    @kojirase_result = KojiraseResult.find_by(level: kojirase_level)
 
     # youtube
     #@matching_app_youtube_date = find_videos('マッチングアプリ')
