@@ -11,7 +11,7 @@
 
       <!-- こじらせレベル表示 -->
       <div class="kojirase-level-title">
-        <h1 class="kojirase-level-title is-opacity" id="kojirase-level-title"><%= @result.kojirase_level_title %></h1>
+        <h1 class="kojirase-level-title is-opacity" id="kojirase-level-title"><%= @kojirase_result.name %></h1>
       </div>
 
 
@@ -21,18 +21,18 @@
       <!-- こじらせメッセージ -->
       <div class="kojirase-message">
         <ul>
-          <li class="kojirase-message is-opacity" id="kojirase-message"><%= @result.kojirase_message %></li>
-          <li class="follower-message is-opacity" id="follower-message"><%= @result.follower_message %></li>
-          <li class="advice-message is-opacity" id="advice-message"><%= @result.advice_message %></li>
+          <li class="kojirase-message is-opacity" id="kojirase-message"><%= @kojirase_result.description %></li>
+          <li class="follower-message is-opacity" id="follower-message"><%#= @result.follower_message %></li>
+          <li class="advice-message is-opacity" id="advice-message"><%= @kojirase_result.advice %></li>
         </ul>
       </div>
 
       <!-- 処方箋 -->
       <div class="prescription">
         <h1 class="prescription-label is-opacity" id="prescription-label">処方箋</h1>
-        <% if @result.kojirase_level == 1 %>
+        <% if @kojirase_result.level == 1 %>
           <%= render 'shared/result/kojirase_level_low' %>
-        <% elsif @result.kojirase_level == 2 || @result.kojirase_level == 3 %>
+        <% elsif @kojirase_result.level == 2 || @kojirase_result.level == 3 %>
           <%= render 'shared/result/kojirase_level_middle' %>
         <% else %>
           <%= render 'shared/result/kojirase_level_high' %>
