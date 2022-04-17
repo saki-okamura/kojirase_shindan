@@ -2,32 +2,34 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-#kojirase-level-title {
+
+// ユーザー名
+.result-name {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  font-size: 3vw;
+  font-weight: bold;
+}
+
+// こじらせレベル
+.kojirase-level-title {
   color: hsl(195, 100%, 99%);
   text-shadow: 5px 10px 1px rgba(63, 62, 62, 0.938);
   font-weight: bold;
   text-align: center;
-  font-size: 50px;
+  font-size: 8vw;
   margin-top: 3px;
   margin-bottom: 50px;
-  font-size: 100px;
 }
 
 .kojirase-message {
-  font-size: 30px;
+  font-size: 3vw;
   margin-top: 80px;
 }
 
 .prescription {
   margin-top: 80px;
-}
-
-.result-name {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  text-align: center;
-  font-size: 40px;
-  font-weight: bold;
 }
 
 .card-body {

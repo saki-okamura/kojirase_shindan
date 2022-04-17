@@ -12,7 +12,8 @@
   <% snippet = item.snippet %>
     <div class="card-group">
       <div class="card">
-        <iframe height="300" src="https://www.youtube.com/embed/<%= item.id.video_id %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <%= content_tag 'iframe', nil, width: 500, height: 300, src: "https://www.youtube.com/embed/#{item.id.video_id}", \
+      frameborder: 0, gesture: 'media', allow: 'encrypted-media', allowfullscreen: true %>
         <div class="card-body">
           <div class="card-text">
             <h3><%= snippet.title %></h2>
