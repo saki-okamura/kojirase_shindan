@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_17_094519) do
+ActiveRecord::Schema.define(version: 2022_04_17_132433) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "follower_sayings", force: :cascade do |t|
     t.bigint "kojirase_result_id", null: false
-    t.integer "level", null: false
+    t.integer "follower_point", null: false
     t.string "message", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
