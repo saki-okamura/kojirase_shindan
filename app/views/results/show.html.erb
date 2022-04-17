@@ -30,15 +30,9 @@
       <!-- 処方箋 -->
       <div class="prescription">
         <h1 class="prescription-label is-opacity" id="prescription-label">処方箋</h1>
-        <% if @kojirase_result.level == 1 %>
-          <%= render 'shared/result/kojirase_level_low' %>
-        <% elsif @kojirase_result.level == 2 || @kojirase_result.level == 3 %>
-          <%= render 'shared/result/kojirase_level_middle' %>
-        <% else %>
-          <%= render 'shared/result/kojirase_level_high' %>
-        <% end %>
+          <%= render 'shared/youtube' %>
+        </div>
       </div>
-    </div>
   </div>
 
   <div class="text-center back-btn">

@@ -1,4 +1,12 @@
-<h3 class="prescription-contents is-opacity" id="prescription-contents">一旦可愛い猫の動画を観て心を落ち着かせましょう</h3>
+<h3 class="prescription-contents is-opacity" id="prescription-contents">
+  <% if @kojirase_level == 1 %>
+    こじらせる前に猫の動画を観て癒されましょう
+  <% elsif @kojirase_level == 2 || @kojirase_level == 3 %>
+    一旦可愛い猫の動画を観て心を落ち着けましょう
+  <% elsif @kojirase_level == 4 || @kojirase_level == 5 %>
+    重症なので猫の動画を観て癒されましょう
+  <% end %>
+</h3>
 <div class="youtube-videos p-5">
   <% @cat_youtube_data.items.each do |item| %>
   <% snippet = item.snippet %>
