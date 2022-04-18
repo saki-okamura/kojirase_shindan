@@ -1,7 +1,6 @@
 class ResultService
   attr_accessor :follower_point, :spec_point, :apo_point, :numa_point, :desperate_point
 
-
   def initialize(follower_point, spec_point, apo_point, numa_point, desperate_point)
     @follower_point = follower_point
     @spec_point = spec_point
@@ -11,7 +10,7 @@ class ResultService
   end
 
   def kojirase_level
-    if  @spec_point == 1 && @apo_point == 1 && @numa_point == 1 && @desperate_point == 1
+    if @spec_point == 1 && @apo_point == 1 && @numa_point == 1 && @desperate_point == 1
       1
     elsif @spec_point <= 2 && @apo_point <= 2 && @numa_point <= 2 && @desperate_point <= 2
       2

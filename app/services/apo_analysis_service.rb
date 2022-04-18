@@ -9,31 +9,32 @@ class ApoAnalysisService
   end
 
   def call
-    words = ['アポ', 'マッチングアプリ', '結婚相談所', '相席屋', '婚活', '仮交際', 'デート', '真剣交際', '打診', '土日', 'ブロック', 'FO', '予約', '待ち合わせ', 'お見合い', 'ラウンジ', 'LINE', 'ライン']
+    words = %w[アポ マッチングアプリ 結婚相談所 相席屋 婚活 仮交際 デート 真剣交際 打診 土日 ブロック FO 予約 待ち合わせ
+               お見合い ラウンジ LINE ライン]
     apo = 0
     words.each do |word|
-      apo += @tweets.filter{|tweet| tweet.text.include?(word)}.size
+      apo += @tweets.filter { |tweet| tweet.text.include?(word) }.size
     end
 
     apo_point = case apo
-              when 0..5
-                1
-              when 6..10
-                1.5
-              when 11..20
-                2
-              when 21..30
-                2.5
-              when 31..40
-                3
-              when 41..50
-                3.5
-              when 51..60
-                4
-              when 61..70
-                4.5
-              else
-                5
-              end
+                when 0..5
+                  1
+                when 6..10
+                  1.5
+                when 11..20
+                  2
+                when 21..30
+                  2.5
+                when 31..40
+                  3
+                when 41..50
+                  3.5
+                when 51..60
+                  4
+                when 61..70
+                  4.5
+                else
+                  5
+                end
   end
 end
