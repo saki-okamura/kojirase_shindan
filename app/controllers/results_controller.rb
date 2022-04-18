@@ -2,7 +2,6 @@ class ResultsController < ApplicationController
   GOOGLE_API_KEY = ENV['GOOGLE_API_KEY']
 
   def show
-
     # 送られてきたIDからユーザーを取得
     @user = twitter_client.user(params[:user])
 
@@ -17,13 +16,13 @@ class ResultsController < ApplicationController
     @numa_point = NumaAnalysisService.new(params[:user], twitter_client, tweets).call
 
     # 診断結果
-    kojirase_level = ResultService.new(@follower_point, @spec_point, @apo_point, @numa_point, @desperate_point).kojirase_level
+    @kojirase_level = ResultService.new(@follower_point, @spec_point, @apo_point, @numa_point,
+                                        @desperate_point).kojirase_level
 
-    @kojirase_result = KojiraseResult.find_by(level: kojirase_level)
+    @kojirase_result = KojiraseResult.find_by(level: @kojirase_level)
+    @follower_saying = FollowerSaying.find_by(kojirase_result_id: @kojirase_result.id, follower_point: @follower_point)
 
     # youtube
-    #@matching_app_youtube_date = find_videos('マッチングアプリ')
-    #@panda_youtube_date = find_videos('パンダ')
     @cat_youtube_data = find_videos('猫 癒し')
   end
 
