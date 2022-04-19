@@ -1,6 +1,5 @@
 class ApoAnalysisService
-  # アポやデートに関するワード
-  # アポ度の診断
+  # アポ(アポイントメント)やデート、お見合いに関するワード
 
   def initialize(user, twitter_client, tweets)
     @user = user

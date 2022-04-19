@@ -1,8 +1,7 @@
 class ResultService
-  attr_accessor :follower_point, :spec_point, :apo_point, :numa_point, :desperate_point
+  attr_accessor :spec_point, :apo_point, :numa_point, :desperate_point
 
-  def initialize(follower_point, spec_point, apo_point, numa_point, desperate_point)
-    @follower_point = follower_point
+  def initialize(spec_point, apo_point, numa_point, desperate_point)
     @spec_point = spec_point
     @apo_point = apo_point
     @numa_point = numa_point

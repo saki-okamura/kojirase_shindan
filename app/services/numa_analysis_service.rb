@@ -1,5 +1,5 @@
 class NumaAnalysisService
-  # 恋愛していてメンヘラになっている度合い
+  # 恋愛していて悩んだり、騙されたり、不安になっているワード
 
   def initialize(user, twitter_client, tweets)
     @user = user
