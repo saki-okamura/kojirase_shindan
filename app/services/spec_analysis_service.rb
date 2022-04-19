@@ -14,6 +14,7 @@ class SpecAnalysisService
       spec += @tweets.filter { |tweet| tweet.text.include?(word) }.size
     end
 
+    # wordsの個数によってspec_pointを点数化
     spec_point = case spec
                  when 0..5
                    1

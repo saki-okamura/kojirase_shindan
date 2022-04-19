@@ -14,6 +14,7 @@ class NumaAnalysisService
       numa += @tweets.filter { |tweet| tweet.text.include?(word) }.size
     end
 
+    # wordsの個数によってnuma_pointを点数化
     numa_point = case numa
                  when 0..5
                    1
