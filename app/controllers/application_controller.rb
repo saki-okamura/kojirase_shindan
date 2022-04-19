@@ -1,16 +1,16 @@
 class ApplicationController < ActionController::Base
   add_flash_types :success, :info, :warning, :danger
 
-  rescue_from Exception, with: :render_500
+  #rescue_from Exception, with: :render_500
   rescue_from ActionController::RoutingError, with: :render_404
 
   rescue_from Twitter::Error::Unauthorized, with: :unauthorized
   rescue_from Twitter::Error::NotFound, with: :not_found
   rescue_from Twitter::Error::TooManyRequests, with: :too_many_requests
 
-  def render_500
-    render file: "#{Rails.root}/public/500.html", layout: false, status: 505
-  end
+  #def render_500
+    #render file: "#{Rails.root}/public/500.html", layout: false, status: 505
+  #end
 
   # 存在しないページへのアクセス時でのエラー
   def render_404

@@ -1,5 +1,5 @@
 class DesperateAnalysisService
-  # モテるために自分磨きを必死にしているワードやプレゼントを叩く生き遅れ度を診断
+  # 特定のプレゼントを叩いたり、モテるために必死なことをしているワード
 
   def initialize(user, twitter_client, tweets)
     @user = user
@@ -8,8 +8,8 @@ class DesperateAnalysisService
   end
 
   def call
-    words = ['コスメ', 'タワマン', '海外旅行', 'モテ', '綺麗', '可愛い', 'ネイル', '美容院', '髪', 'ダイエット', 'ジム', '筋トレ', 'メイク', 'プレゼント',
-             'CHANEL', 'コットン', 'GUCCI', '4℃', 'ロイヤルミルクティー', 'サイゼ', '指輪', '奢り', '奢られ', 'バレンタイン', 'ホワイトデー', 'クリスマス', 'バッグ', 'ネックレス', 'ブランド', 'シャネル', 'グッチ', 'ハイブラ', 'サプライズ', 'ファミレス']
+    words = %w[コスメ タワマン 海外旅行 モテ 綺麗 可愛い ネイル 美容院 髪 ダイエット ジム 筋トレ メイク プレゼント
+             CHANEL コットン GUCCI 4℃ ロイヤルミルクティー サイゼ 指輪 奢り 奢られ バレンタイン ホワイトデー クリスマス バッグ ネックレス ブランド シャネル グッチ ハイブラ サプライズ ファミレス]
     desperate = 0
     words.each do |word|
       desperate += @tweets.filter { |tweet| tweet.text.include?(word) }.size

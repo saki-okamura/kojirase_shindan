@@ -1,5 +1,5 @@
 class SpecAnalysisService
-  # 異性のスペック度の診断
+  # 異性に求めるスペックのワード
 
   def initialize(user, twitter_client, tweets)
     @user = user
