@@ -8,6 +8,8 @@ class FollowerAnalysisService
 
   def call
     follower = @twitter_client.user(@user).followers_count
+
+    # フォロワーの数によってfollower_pointを点数化
     follower_point = case follower
                      when 0..100
                        1

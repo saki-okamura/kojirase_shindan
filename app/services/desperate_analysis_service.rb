@@ -15,6 +15,7 @@ class DesperateAnalysisService
       desperate += @tweets.filter { |tweet| tweet.text.include?(word) }.size
     end
 
+    # wordsの個数によってdesperate_pointを点数化
     desperate_point = case desperate
                       when 0..5
                         1

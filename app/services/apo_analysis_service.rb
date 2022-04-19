@@ -15,6 +15,7 @@ class ApoAnalysisService
       apo += @tweets.filter { |tweet| tweet.text.include?(word) }.size
     end
 
+  # wordsの個数によってapo_pointを点数化
     apo_point = case apo
                 when 0..5
                   1
