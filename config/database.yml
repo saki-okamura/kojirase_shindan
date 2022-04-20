@@ -84,3 +84,6 @@ production:
   database: kojirase_shindan_production
   username: kojirase_shindan
   password: <%= ENV['KOJIRASE_SHINDAN_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
