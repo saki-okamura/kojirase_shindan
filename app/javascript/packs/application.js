@@ -14,3 +14,7 @@ ActiveStorage.start()
 
 require('jquery')
 require('show.js')
+
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets

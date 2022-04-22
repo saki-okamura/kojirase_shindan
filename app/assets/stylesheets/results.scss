@@ -56,3 +56,15 @@
 .is-opacity-active {
   opacity: 1;
 }
+
+.share-button {
+  position: fixed;
+  opacity: 0.9;
+  right: 5vw;
+  bottom: 11vw;
+  border-radius: 50%;
+  padding: 25px;
+  background-color: #0887db;
+  font-size: 2rem;
+  color: white;
+}
