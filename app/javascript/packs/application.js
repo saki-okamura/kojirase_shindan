@@ -15,6 +15,10 @@ ActiveStorage.start()
 require('jquery')
 require('show.js')
 
+$(function () {
+  $('html,body').animate({ scrollTop: 0 }, '1');
+});
+
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
