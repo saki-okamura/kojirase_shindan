@@ -39,13 +39,13 @@ TwitterのアカウントIDを入力するだけで、「この人はこじら�
 ・Youtube API
 
 # スケジュール
-README〜ER図作成：3月末 〆切
+・README〜ER図作成：3月末 〆切
 
-メイン機能実装：4/1~4/20
+・メイン機能実装：4/1~4/20
 
-β版をRUNTEQ内リリース（MVP）：4/21〆切
+・β版をRUNTEQ内リリース（MVP）：4/21〆切
 
-本番リリース：4月末
+・本番リリース：4月末
 
 # 画面推移図
 https://www.figma.com/file/DlGJXhCX144Ir4Dq3BJ6T3/%E3%81%93%E3%81%98%E3%82%89%E3%81%9B%E8%A8%BA%E6%96%AD?node-id=2%3A3
