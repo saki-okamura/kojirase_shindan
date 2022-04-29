@@ -1,4 +1,6 @@
 class ResultService
+  # こじらせレベル(1~5)を決めるロジック
+
   attr_accessor :spec_point, :apo_point, :numa_point, :desperate_point
 
   def initialize(spec_point, apo_point, numa_point, desperate_point)
