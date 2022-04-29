@@ -11,11 +11,7 @@ module ApplicationHelper
       reverse: true,
       charset: 'utf-8',
       description: 'ツイートからこじらせ度を診断するアプリ',
-<<<<<<< HEAD
       keywords: 'こじらせ, 診断, メンヘラ, 女性, 婚活',
-=======
-      keywords: 'こじらせ, メンヘラ, 婚活, 女性, 診断',
->>>>>>> develop
       canonical: request.original_url,
       separator: '|',
       icon: [
