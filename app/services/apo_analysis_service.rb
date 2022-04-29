@@ -8,7 +8,7 @@ class ApoAnalysisService
   end
 
   def call
-    words = %w[アポ マッチングアプリ 結婚相談所 相席屋 婚活 仮交際 デート 真剣交際 打診 ブロック FO 予約 待ち合わせ
+    words = %w[アポ マッチングアプリ 結婚 相談所 相席屋 婚活 仮交際 デート 真剣交際 打診 ブロック FO 予約 待ち合わせ
                お見合い ラウンジ LINE ライン]
     apo = 0
     words.each do |word|
