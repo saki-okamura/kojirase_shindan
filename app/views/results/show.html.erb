@@ -38,4 +38,10 @@
   <div class="text-center back-btn">
     <%= button_to 'トップへ戻る', root_path, method: :get, class: 'btn btn-malformation shadow' %>
   </div>
+
+  <div class='twitter-button'>
+    <%= link_to "https://twitter.com/share?&url=https://kojirase-shindan.com/&text=【#{@user.name}】さんは【#{@kojirase_result.name}】です。&hashtags=こじらせ診断,婚活,メンヘラ,恋愛&lang=ja", title: 'Twitter', target: :_blank, rel: 'noopener noreferrer' do %>
+      <i class="fab fa-twitter share-button"></i>
+    <% end %>
+  </div>
 </section>
