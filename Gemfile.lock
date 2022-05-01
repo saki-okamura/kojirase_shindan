@@ -121,6 +121,8 @@ GEM
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
+    font-awesome-sass (5.11.2)
+      sassc (>= 1.11)
     globalid (1.0.0)
       activesupport (>= 5.0)
     google-api-client (0.9.20)
@@ -338,6 +340,7 @@ DEPENDENCIES
   bootstrap
   byebug
   dotenv-rails
+  font-awesome-sass (~> 5.11.2)
   google-api-client (= 0.9.20)
   jbuilder (~> 2.7)
   jquery-rails
