@@ -16,13 +16,7 @@ class ResultsController < ApplicationController
     @numa_point = NumaAnalysisService.new(params[:user], twitter_client, tweets).call
 
 
-    # 診断結果
-    kojirase_level = ResultService.new(@spec_point, @apo_point, @numa_point,
-                                        @desperate_point).kojirase_level
-
-    @kojirase_result = KojiraseResult.find_by(level: kojirase_level)
-
-    # こじらせレベル(1~5)段階
+    # こじらせレベル(1~5)段階を取得
     kojirase_level = ResultService.new(@spec_point, @apo_point, @numa_point,
                                         @desperate_point).kojirase_level
 
