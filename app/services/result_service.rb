@@ -1,5 +1,5 @@
 class ResultService
-  # こじらせレベル(1~5)を決めるロジック
+  # こじらせの度合い(1~5)を決めるロジック
 
   def initialize(spec_point, apo_point, numa_point, desperate_point)
     @spec_point = spec_point
