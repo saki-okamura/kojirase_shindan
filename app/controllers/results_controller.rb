@@ -15,7 +15,7 @@ class ResultsController < ApplicationController
     @apo_point = ApoAnalysisService.new(params[:user], twitter_client, tweets).call
     @numa_point = NumaAnalysisService.new(params[:user], twitter_client, tweets).call
 
-    # こじらせレベル(1~5)段階
+    # こじらせレベル(1~5段階)を取得
     @kojirase_level = ResultService.new(@spec_point, @apo_point, @numa_point,
                                         @desperate_point).kojirase_level
 
