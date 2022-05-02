@@ -16,12 +16,12 @@ class ResultsController < ApplicationController
     @numa_point = NumaAnalysisService.new(params[:user], twitter_client, tweets).call
 
     # こじらせレベル(1~5)段階
-    kojirase_level = ResultService.new(@spec_point, @apo_point, @numa_point,
+    @kojirase_level = ResultService.new(@spec_point, @apo_point, @numa_point,
                                         @desperate_point).kojirase_level
 
     # こじらせレベルに応じた結果をデータベースから探す
-    @kojirase_result = KojiraseResult.find_by(level: kojirase_level)
-    @follower_saying = FollowerSaying.find_by(kojirase_result_id: @kojirase_result.id, follower_point: @follower_point)
+    @kojirase_result = KojiraseResult.find_by(level: @kojirase_level)
+    @follower_saying = @kojirase_result.follower_sayings.find_by(follower_point: @follower_point)
 
     # youtube
     @cat_youtube_data = find_videos('猫 癒し')
