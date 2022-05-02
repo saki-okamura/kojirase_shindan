@@ -1,5 +1,5 @@
 class DesperateAnalysisService
-  # 特定のプレゼントを叩いたり、モテるために必死なことをしているワード
+  # 特定のプレゼントを叩いたり、モテるために必死なことをしているワードや記念日、イベントに関するワード
 
   def initialize(user, twitter_client, tweets)
     @user = user
